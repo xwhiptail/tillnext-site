@@ -4,5 +4,6 @@ This repository hosts the public App Store support and privacy pages for TillNex
 
 - Privacy Policy: https://xwhiptail.github.io/tillnext-site/privacy-policy/
 - Support: https://xwhiptail.github.io/tillnext-site/support/
+- Public support issues: https://github.com/xwhiptail/tillnext-site/issues
 
 TillNext app source code is intentionally not included here.
