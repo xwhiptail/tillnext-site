@@ -4,22 +4,115 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>TillNext: Paycheck Planner Support</title>
-    <meta name="description" content="Public support and privacy pages for TillNext: Paycheck Planner.">
+    <meta name="description" content="Support, privacy, help, and release information for TillNext: Paycheck Planner, a local-first iPhone app for planning what is left until next paycheck.">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <main>
-      <nav>
-        <a href="help/">Help &amp; FAQ</a>
-        <a href="privacy-policy/">Privacy Policy</a>
-        <a href="support/">Support</a>
-        <a href="changelog/">Changelog</a>
+    <main class="home-page">
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a class="brand-link" href="./" aria-label="TillNext home">
+          <span class="brand-wordmark">Till<span>Next</span></span>
+        </a>
+        <div class="nav-links">
+          <a href="help/">Help &amp; FAQ</a>
+          <a href="privacy-policy/">Privacy Policy</a>
+          <a href="support/">Support</a>
+          <a href="changelog/">Changelog</a>
+        </div>
       </nav>
-      <h1>TillNext: Paycheck Planner</h1>
-      <p>TillNext: Paycheck Planner is a local-first paycheck planning app for iPhone. It helps you see what is coming in, what needs to go out, and what is left for the month.</p>
-      <p>This public site hosts TillNext help, privacy, support, and release information. Support email is <a href="mailto:support@tillnext.app">support@tillnext.app</a>.</p>
+
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">TillNext: Paycheck Planner</p>
+          <h1 id="hero-title">Plan what is left until next paycheck.</h1>
+          <p class="hero-lede">
+            TillNext is a local-first iPhone app for planning income, recurring bills,
+            one-time expenses, savings, and the month ahead without connecting a bank account.
+          </p>
+          <div class="hero-actions" aria-label="Support links">
+            <a class="button primary" href="help/">Get Help</a>
+            <a class="button secondary" href="support/">Contact Support</a>
+          </div>
+          <ul class="trust-list" aria-label="Privacy highlights">
+            <li>No account</li>
+            <li>No bank sync</li>
+            <li>No ads or analytics</li>
+          </ul>
+        </div>
+
+        <div class="hero-media" aria-label="TillNext app screenshots">
+          <img class="phone-shot phone-shot-main" src="assets/help-home.png" alt="TillNext Home screen showing what is left for the month and upcoming items.">
+          <img class="phone-shot phone-shot-side" src="assets/help-recurring.png" alt="TillNext Recurring screen showing recurring income and recurring expenses.">
+        </div>
+      </section>
+
+      <section class="intro-grid" aria-label="What TillNext helps with">
+        <article class="info-card">
+          <h2>Plan Between Paychecks</h2>
+          <p>See what is coming in, what needs to go out, and what is left for the month.</p>
+        </article>
+        <article class="info-card">
+          <h2>Keep Recurring Items Together</h2>
+          <p>Add paychecks, bills, subscriptions, and other repeating items once, then review them by month.</p>
+        </article>
+        <article class="info-card">
+          <h2>Handle One-Time Expenses</h2>
+          <p>Add repairs, gifts, fees, groceries, or other one-off spending without rebuilding a spreadsheet.</p>
+        </article>
+      </section>
+
+      <section class="screen-tour" aria-labelledby="screens-title">
+        <div class="section-heading">
+          <p class="eyebrow">App Screens</p>
+          <h2 id="screens-title">A quiet planner for real monthly money.</h2>
+          <p>These pages show the main places people use TillNext after setup.</p>
+        </div>
+        <div class="screen-grid">
+          <figure>
+            <img src="assets/help-home.png" alt="TillNext Home screen with monthly balance, overview, and upcoming items.">
+            <figcaption>Home shows the month, upcoming items, completed items, and what is left.</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/help-recurring.png" alt="TillNext Recurring screen with recurring income and recurring expenses.">
+            <figcaption>Recurring keeps repeated income and bills organized by month.</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/help-settings.png" alt="TillNext Settings screen with display, data, help, support, and privacy controls.">
+            <figcaption>Settings keeps export, reset, support, and privacy controls in one place.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="privacy-strip" aria-labelledby="privacy-title">
+        <div>
+          <p class="eyebrow">Privacy First</p>
+          <h2 id="privacy-title">Your planning data stays on your iPhone.</h2>
+        </div>
+        <p>
+          TillNext does not use developer-operated accounts, external bank connectors, advertising SDKs,
+          analytics SDKs, or third-party tracking. You can export a CSV or reset local data from Settings.
+        </p>
+        <a class="button secondary" href="privacy-policy/">Read Privacy Policy</a>
+      </section>
+
+      <section class="support-links" aria-label="Support destinations">
+        <a href="help/">
+          <strong>Help &amp; FAQ</strong>
+          <span>Common tasks, screenshots, and setup guidance.</span>
+        </a>
+        <a href="support/">
+          <strong>Support</strong>
+          <span>Email support and public technical issue reporting.</span>
+        </a>
+        <a href="changelog/">
+          <strong>Changelog</strong>
+          <span>User-facing updates, privacy posture, and release notes.</span>
+        </a>
+      </section>
+
       <footer>
-        <span>Last updated: April 27, 2026</span>
+        <span>Last updated: April 28, 2026</span>
+        <span>Support email: <a href="mailto:support@tillnext.app">support@tillnext.app</a></span>
       </footer>
     </main>
   </body>
