@@ -58,8 +58,14 @@
         </div>
 
         <div class="hero-media" aria-label="TillNext app screenshots">
-          <img class="phone-shot phone-shot-main" src="assets/help-home.png" alt="TillNext Home screen showing what is left for the month and upcoming items.">
-          <img class="phone-shot phone-shot-side" src="assets/help-recurring.png" alt="TillNext Recurring screen showing recurring income and recurring expenses.">
+          <picture>
+            <source srcset="assets/help-home-dark.png" media="(prefers-color-scheme: dark)">
+            <img class="phone-shot phone-shot-main" src="assets/help-home.png" alt="TillNext Home screen showing what is left for the month and upcoming items.">
+          </picture>
+          <picture>
+            <source srcset="assets/help-recurring-dark.png" media="(prefers-color-scheme: dark)">
+            <img class="phone-shot phone-shot-side" src="assets/help-recurring.png" alt="TillNext Recurring screen showing recurring income and recurring expenses.">
+          </picture>
         </div>
       </section>
 
@@ -86,16 +92,32 @@
         </div>
         <div class="screen-grid">
           <figure>
-            <img src="assets/help-home.png" alt="TillNext Home screen with monthly balance, overview, and upcoming items.">
+            <picture>
+              <source srcset="assets/help-home-dark.png" media="(prefers-color-scheme: dark)">
+              <img src="assets/help-home.png" alt="TillNext Home screen with monthly balance, overview, and upcoming items.">
+            </picture>
             <figcaption>Home shows the month, upcoming items, completed items, and what is left.</figcaption>
           </figure>
           <figure>
-            <img src="assets/help-recurring.png" alt="TillNext Recurring screen with recurring income and recurring expenses.">
+            <picture>
+              <source srcset="assets/help-recurring-dark.png" media="(prefers-color-scheme: dark)">
+              <img src="assets/help-recurring.png" alt="TillNext Recurring screen with recurring income and recurring expenses.">
+            </picture>
             <figcaption>Recurring keeps repeated income and bills organized by month.</figcaption>
           </figure>
           <figure>
-            <img src="assets/help-settings.png" alt="TillNext Settings screen with display, data, help, support, and privacy controls.">
+            <picture>
+              <source srcset="assets/help-settings-dark.png" media="(prefers-color-scheme: dark)">
+              <img src="assets/help-settings.png" alt="TillNext Settings screen with display, data, help, support, and privacy controls.">
+            </picture>
             <figcaption>Settings keeps export, reset, support, and privacy controls in one place.</figcaption>
+          </figure>
+          <figure>
+            <picture>
+              <source srcset="assets/widget-home-dark.png" media="(prefers-color-scheme: dark)">
+              <img src="assets/widget-home.png" alt="TillNext Home Screen widgets showing quick-add buttons and the Till Next amount.">
+            </picture>
+            <figcaption>Widgets show the same Till Next amount as Home, with quick-add buttons for one-time income and expenses.</figcaption>
           </figure>
         </div>
       </section>
@@ -133,18 +155,16 @@
           <h2 id="social-title">Launch updates, quick demos, and small business dev notes.</h2>
         </div>
         <div class="social-links" aria-label="TillNext social links">
-          <a href="https://www.tiktok.com/@tillnext.app" rel="noopener">TikTok @tillnext.app</a>
-          <a href="https://www.instagram.com/tillnext.app/" rel="noopener">Instagram @tillnext.app</a>
+          <a class="tiktok-link" href="https://www.tiktok.com/@tillnext.app" rel="noopener" aria-label="TikTok @tillnext.app">
+            <span class="tiktok-symbol" aria-hidden="true">&#9834;</span>
+            <span>TikTok @tillnext.app</span>
+          </a>
         </div>
       </section>
 
       <footer>
-        <span>Last updated: April 28, 2026</span>
+        <span>Last updated: May 1, 2026</span>
         <span>Support email: <a href="mailto:support@tillnext.app">support@tillnext.app</a></span>
-        <span class="social-links footer-social">
-          <a href="https://www.tiktok.com/@tillnext.app" rel="noopener">TikTok</a>
-          <a href="https://www.instagram.com/tillnext.app/" rel="noopener">Instagram</a>
-        </span>
       </footer>
     </main>
   </body>

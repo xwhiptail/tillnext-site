@@ -10,3 +10,5 @@ This repository hosts the public App Store support and privacy pages for TillNex
 - Public support issues: https://github.com/xwhiptail/tillnext-site/issues
 
 TillNext app source code is intentionally not included here.
+
+Public screenshots include light and dark app views, actual iPhone Home Screen widget screenshots for each widget size, and Home wording comparison examples.

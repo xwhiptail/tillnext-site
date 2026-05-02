@@ -21,7 +21,10 @@
       <h2>Start With Home</h2>
       <p>Home shows the current month, upcoming and completed items, and how much is left till next month or next income.</p>
       <figure>
-        <img src="../assets/help-home.png" alt="TillNext Home screen showing monthly paycheck planning and upcoming items.">
+        <picture>
+          <source srcset="../assets/help-home-dark.png" media="(prefers-color-scheme: dark)">
+          <img src="../assets/help-home.png" alt="TillNext Home screen showing monthly paycheck planning and upcoming items.">
+        </picture>
         <figcaption>Home is the main place to check what is coming up and mark income or expenses as done.</figcaption>
       </figure>
       <ul>
@@ -34,7 +37,10 @@
       <h2>Manage Recurring Items</h2>
       <p>The Recurring tab is where repeating income and bills live. It also lets you view recurring items in future months.</p>
       <figure>
-        <img src="../assets/help-recurring.png" alt="TillNext Recurring screen showing recurring income, recurring expenses, and month navigation.">
+        <picture>
+          <source srcset="../assets/help-recurring-dark.png" media="(prefers-color-scheme: dark)">
+          <img src="../assets/help-recurring.png" alt="TillNext Recurring screen showing recurring income, recurring expenses, and month navigation.">
+        </picture>
         <figcaption>Recurring month navigation helps you inspect future occurrences without changing the original rule.</figcaption>
       </figure>
       <ul>
@@ -48,7 +54,10 @@
       <h2>Use Settings</h2>
       <p>Settings keeps local app controls together: display preferences, carryover, CSV export, reset, help, support, and terms.</p>
       <figure>
-        <img src="../assets/help-settings.png" alt="TillNext Settings screen showing display, planning, data, and support controls.">
+        <picture>
+          <source srcset="../assets/help-settings-dark.png" media="(prefers-color-scheme: dark)">
+          <img src="../assets/help-settings.png" alt="TillNext Settings screen showing display, planning, data, and support controls.">
+        </picture>
         <figcaption>Settings is where you export CSV data, reset local data, find help, contact support, and review terms.</figcaption>
       </figure>
       <ul>
@@ -57,6 +66,46 @@
         <li>Use support links for private email support or public technical issue reports.</li>
         <li>Review Terms &amp; Privacy from the small footer link.</li>
       </ul>
+
+      <h2>Use Home Screen Widgets</h2>
+      <p>TillNext widgets show the same Till Next amount as Home. The small and medium widgets include quick-add buttons for one-time income and expenses, and the large widget shows the next few Home items.</p>
+      <div class="example-grid">
+        <figure>
+          <picture>
+            <source srcset="../assets/examples/widgets-small-medium-dark.png" media="(prefers-color-scheme: dark)">
+            <img src="../assets/examples/widgets-small-medium-light.png" alt="Small and medium TillNext widgets on the iPhone Home Screen.">
+          </picture>
+          <figcaption>Small and medium widgets keep quick one-time entry close by.</figcaption>
+        </figure>
+        <figure>
+          <picture>
+            <source srcset="../assets/examples/widget-large-dark.png" media="(prefers-color-scheme: dark)">
+            <img src="../assets/examples/widget-large-light.png" alt="Large TillNext widget on the iPhone Home Screen with upcoming items.">
+          </picture>
+          <figcaption>The large widget shows the Till Next amount and the next few Home items.</figcaption>
+        </figure>
+      </div>
+
+      <h2>Compare Home Display Options</h2>
+      <p>Home follows the iPhone Light or Dark Mode setting. The Less Wordy option hides extra intro copy while keeping the same planner controls.</p>
+      <div class="example-grid">
+        <figure>
+          <img src="../assets/examples/home-light-wordy.png" alt="TillNext Home in Light Mode with normal wording.">
+          <figcaption>Light Mode with normal wording.</figcaption>
+        </figure>
+        <figure>
+          <img src="../assets/examples/home-light-less-wordy.png" alt="TillNext Home in Light Mode with Less Wordy enabled.">
+          <figcaption>Light Mode with Less Wordy enabled.</figcaption>
+        </figure>
+        <figure>
+          <img src="../assets/examples/home-dark-wordy.png" alt="TillNext Home in Dark Mode with normal wording.">
+          <figcaption>Dark Mode with normal wording.</figcaption>
+        </figure>
+        <figure>
+          <img src="../assets/examples/home-dark-less-wordy.png" alt="TillNext Home in Dark Mode with Less Wordy enabled.">
+          <figcaption>Dark Mode with Less Wordy enabled.</figcaption>
+        </figure>
+      </div>
 
       <h2>Common Tasks</h2>
       <h3>Add a paycheck</h3>
@@ -100,10 +149,12 @@
       <p>For private support, email <a href="mailto:support@tillnext.app">support@tillnext.app</a>. For technical bug reports, use <a href="https://github.com/xwhiptail/tillnext-site/issues">GitHub Issues</a>.</p>
 
       <footer>
-        <span>Last updated: April 27, 2026</span>
+        <span>Last updated: May 1, 2026</span>
         <span class="social-links footer-social">
-          <a href="https://www.tiktok.com/@tillnext.app" rel="noopener">TikTok</a>
-          <a href="https://www.instagram.com/tillnext.app/" rel="noopener">Instagram</a>
+          <a class="tiktok-link" href="https://www.tiktok.com/@tillnext.app" rel="noopener" aria-label="TikTok @tillnext.app">
+            <span class="tiktok-symbol" aria-hidden="true">&#9834;</span>
+            <span>TikTok</span>
+          </a>
         </span>
       </footer>
     </main>
