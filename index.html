@@ -33,6 +33,7 @@
         <div class="nav-links">
           <a href="help/">Help &amp; FAQ</a>
           <a href="privacy-policy/">Privacy Policy</a>
+          <a href="terms-of-use/">Terms of Use</a>
           <a href="support/">Support</a>
           <a href="changelog/">Changelog</a>
         </div>
@@ -84,40 +85,56 @@
         </article>
       </section>
 
-      <section class="screen-tour" aria-labelledby="screens-title">
+      <section class="screen-showcase" aria-labelledby="screens-title">
         <div class="section-heading">
-          <p class="eyebrow">App Screens</p>
-          <h2 id="screens-title">A quiet planner for real monthly money.</h2>
-          <p>These pages show the main places people use TillNext after setup.</p>
+          <p class="eyebrow">App Showcase</p>
+          <h2 id="screens-title">The planner, the repeat list, and the widgets all stay in sync.</h2>
+          <p>Home is the daily view. Recurring keeps the month predictable. Settings and widgets stay close when you need them.</p>
         </div>
-        <div class="screen-grid">
-          <figure>
+        <div class="showcase-grid">
+          <figure class="showcase-card showcase-card-primary">
             <picture>
               <source srcset="assets/help-home-dark.png" media="(prefers-color-scheme: dark)">
               <img src="assets/help-home.png" alt="TillNext Home screen with monthly balance, overview, and upcoming items.">
             </picture>
-            <figcaption>Home shows the month, upcoming items, completed items, and what is left.</figcaption>
+            <figcaption>
+              <strong>Home</strong>
+              <span>See what is left, what is coming up, and what is already done for the current month.</span>
+            </figcaption>
           </figure>
-          <figure>
-            <picture>
-              <source srcset="assets/help-recurring-dark.png" media="(prefers-color-scheme: dark)">
-              <img src="assets/help-recurring.png" alt="TillNext Recurring screen with recurring income and recurring expenses.">
-            </picture>
-            <figcaption>Recurring keeps repeated income and bills organized by month.</figcaption>
-          </figure>
-          <figure>
-            <picture>
-              <source srcset="assets/help-settings-dark.png" media="(prefers-color-scheme: dark)">
-              <img src="assets/help-settings.png" alt="TillNext Settings screen with display, data, help, support, and privacy controls.">
-            </picture>
-            <figcaption>Settings keeps export, reset, support, and privacy controls in one place.</figcaption>
-          </figure>
-          <figure>
+
+          <div class="showcase-stack" aria-label="Supporting app screens">
+            <figure class="showcase-card showcase-card-compact">
+              <picture>
+                <source srcset="assets/help-recurring-dark.png" media="(prefers-color-scheme: dark)">
+                <img src="assets/help-recurring.png" alt="TillNext Recurring screen with recurring income and recurring expenses.">
+              </picture>
+              <figcaption>
+                <strong>Recurring</strong>
+                <span>Paychecks, bills, autopay items, and subscriptions live together by month.</span>
+              </figcaption>
+            </figure>
+            <figure class="showcase-card showcase-card-compact">
+              <picture>
+                <source srcset="assets/help-settings-dark.png" media="(prefers-color-scheme: dark)">
+                <img src="assets/help-settings.png" alt="TillNext Settings screen with display, data, help, support, and privacy controls.">
+              </picture>
+              <figcaption>
+                <strong>Settings</strong>
+                <span>Export CSV, adjust planning behavior, review privacy, and reach support.</span>
+              </figcaption>
+            </figure>
+          </div>
+
+          <figure class="showcase-card widget-showcase">
             <picture>
               <source srcset="assets/widget-home-dark.png" media="(prefers-color-scheme: dark)">
               <img src="assets/widget-home.png" alt="TillNext Home Screen widgets showing quick-add buttons and the Till Next amount.">
             </picture>
-            <figcaption>Widgets show the same Till Next amount as Home, with quick-add buttons for one-time income and expenses.</figcaption>
+            <figcaption>
+              <strong>Widgets</strong>
+              <span>Keep the Till Next amount on the Home Screen and jump into quick one-time income or expense entry.</span>
+            </figcaption>
           </figure>
         </div>
       </section>
@@ -131,7 +148,10 @@
           TillNext does not use developer-operated accounts, external bank connectors, advertising SDKs,
           analytics SDKs, or third-party tracking. You can export a CSV or reset local data from Settings.
         </p>
-        <a class="button secondary" href="privacy-policy/">Read Privacy Policy</a>
+        <div class="privacy-actions">
+          <a class="button secondary" href="privacy-policy/">Read Privacy Policy</a>
+          <a class="button secondary" href="terms-of-use/">Read Terms</a>
+        </div>
       </section>
 
       <section class="support-links" aria-label="Support destinations">
@@ -142,6 +162,10 @@
         <a href="support/">
           <strong>Support</strong>
           <span>Email support and public technical issue reporting.</span>
+        </a>
+        <a href="terms-of-use/">
+          <strong>Terms of Use</strong>
+          <span>Plain terms for personal planning, purchases, and local data.</span>
         </a>
         <a href="changelog/">
           <strong>Changelog</strong>
@@ -163,7 +187,7 @@
       </section>
 
       <footer>
-        <span>Last updated: May 1, 2026</span>
+        <span>Last updated: May 2, 2026</span>
         <span>Support email: <a href="mailto:support@tillnext.app">support@tillnext.app</a></span>
       </footer>
     </main>
