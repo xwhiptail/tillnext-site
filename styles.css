@@ -341,32 +341,58 @@ img {
 }
 
 .showcase-media {
+  isolation: isolate;
   min-height: 600px;
+  perspective: 1200px;
+}
+
+.showcase-media::before {
+  position: absolute;
+  right: 2%;
+  bottom: 2%;
+  left: 8%;
+  z-index: 0;
+  height: 44%;
+  content: "";
+  background: var(--surface-strong);
+  border: 1px solid var(--outline);
+  border-radius: 28px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  opacity: 0.82;
+  transform: rotate(-4deg) skewY(-3deg);
+  transform-origin: 50% 100%;
 }
 
 .showcase-media .phone-shot-main {
-  right: 25%;
-  top: 2%;
-  width: min(48%, 330px);
+  top: 4%;
+  left: 6%;
+  z-index: 1;
+  width: min(38%, 270px);
+  opacity: 0.86;
+  transform: rotate(-7deg) translateY(18px);
 }
 
 .showcase-media .phone-shot-side {
-  right: 0;
-  top: 16%;
-  width: min(44%, 300px);
+  top: 6%;
+  right: 3%;
+  z-index: 1;
+  width: min(40%, 286px);
+  opacity: 0.82;
+  transform: rotate(7deg) translateY(-4px);
 }
 
 .widget-shot {
   position: absolute;
-  left: 0;
+  left: 50%;
   bottom: 5%;
   z-index: 3;
-  width: min(60%, 430px);
+  width: min(66%, 470px);
   height: auto;
   margin: 0;
   object-fit: cover;
   border-radius: 24px;
   filter: drop-shadow(0 24px 52px rgba(0, 0, 0, 0.28));
+  transform: translateX(-50%) rotate(-1deg);
 }
 
 .example-grid {
@@ -543,21 +569,28 @@ code {
     min-height: 560px;
   }
 
+  .showcase-media::before {
+    right: 4%;
+    bottom: 3%;
+    left: 6%;
+    height: 40%;
+  }
+
   .showcase-media .phone-shot-main {
     left: 6%;
     right: auto;
-    width: min(54%, 290px);
+    width: min(40%, 236px);
   }
 
   .showcase-media .phone-shot-side {
     right: 6%;
-    width: min(50%, 270px);
+    width: min(42%, 246px);
   }
 
   .widget-shot {
-    left: 18%;
+    left: 50%;
     bottom: 0;
-    width: min(64%, 430px);
+    width: min(72%, 430px);
   }
 
   .example-grid {
@@ -645,25 +678,36 @@ code {
   }
 
   .showcase-media {
-    min-height: 480px;
+    min-height: 520px;
+  }
+
+  .showcase-media::before {
+    right: 0;
+    bottom: 4%;
+    left: 0;
+    height: 38%;
+    border-radius: 22px;
   }
 
   .showcase-media .phone-shot-main {
     left: 0;
-    width: min(60%, 240px);
+    top: 4%;
+    width: min(46%, 178px);
     border-radius: 20px;
+    transform: rotate(-8deg) translateY(18px);
   }
 
   .showcase-media .phone-shot-side {
     right: 0;
-    top: 22%;
-    width: min(56%, 224px);
+    top: 8%;
+    width: min(48%, 186px);
     border-radius: 20px;
+    transform: rotate(8deg);
   }
 
   .widget-shot {
-    left: 6%;
-    bottom: 0;
+    left: 50%;
+    bottom: 3%;
     width: min(88%, 340px);
     border-radius: 18px;
   }
