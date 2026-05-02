@@ -494,18 +494,6 @@ figcaption {
     inset 2px 0 0 #fe2c55;
 }
 
-.footer-social a {
-  min-height: 34px;
-  padding: 0 10px;
-  font-size: 0.88rem;
-}
-
-.footer-social .tiktok-symbol {
-  width: 20px;
-  height: 20px;
-  font-size: 0.86rem;
-}
-
 footer {
   display: flex;
   gap: 10px 20px;
