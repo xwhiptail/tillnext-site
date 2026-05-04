@@ -12,4 +12,6 @@ This repository hosts the public App Store support and privacy pages for TillNex
 
 TillNext app source code is intentionally not included here.
 
+Current public changelog release candidate: version 1.1.1 pre-launch.
+
 Public screenshots include light and dark app views for the current tabs, actual iPhone Home Screen widget screenshots for each widget size, and Home light/dark comparison examples.
