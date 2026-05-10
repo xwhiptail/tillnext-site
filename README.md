@@ -2,11 +2,12 @@
 
 This repository hosts the public App Store support and privacy pages for TillNext: Paycheck Planner.
 
-- Privacy Policy: https://xwhiptail.github.io/tillnext-site/privacy-policy/
-- Terms of Use: https://xwhiptail.github.io/tillnext-site/terms-of-use/
-- Help & FAQ: https://xwhiptail.github.io/tillnext-site/help/
-- Support: https://xwhiptail.github.io/tillnext-site/support/
-- Changelog: https://xwhiptail.github.io/tillnext-site/changelog/
+- Marketing Site: https://tillnext.app/
+- Privacy Policy: https://tillnext.app/privacy-policy/
+- Terms of Use: https://tillnext.app/terms-of-use/
+- Help & FAQ: https://tillnext.app/help/
+- Support: https://tillnext.app/support/
+- Changelog: https://tillnext.app/changelog/
 - Support email: support@tillnext.app
 - Public support issues: https://github.com/xwhiptail/tillnext-site/issues
 
