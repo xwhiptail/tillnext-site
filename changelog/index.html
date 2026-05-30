@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>TillNext: Paycheck Planner Changelog</title>
     <meta name="description" content="Public changelog for TillNext: Paycheck Planner.">
-    <link rel="stylesheet" href="../styles.css?v=20260526-build340">
+    <link rel="stylesheet" href="../styles.css?v=20260503-clean-widget-corners">
   </head>
   <body>
     <main>
@@ -20,43 +20,38 @@
       <h1>TillNext: Paycheck Planner Changelog</h1>
       <p>Public notes for meaningful TillNext changes. This page focuses on user-facing updates, privacy posture, and support information.</p>
 
-      <h2>Version 1.1.6, Pre-Launch</h2>
+      <h2>Version 1.1.6</h2>
       <p><strong>Updated:</strong> May 30, 2026</p>
       <h3>May 30, 2026</h3>
       <ul>
-        <li>Prepared build 344 for pre-launch testing.</li>
-        <li>Refreshed App Store screenshots to show Tilly in the home screen companion position.</li>
         <li>Fixed the medium Tilly widget so the layout no longer clips at the top and bottom — removed the quick-add buttons to give Tilly and the balance text room to breathe.</li>
         <li>Fixed the small Tilly widget so text is no longer truncated — Tilly is sized to leave room for the balance and month label.</li>
-        <li>Added Tilly's full character to the Tilly Home Screen widget so arms, legs, and the clock body are visible, not just the face.</li>
+        <li>Added Tilly's full character to the Tilly Home Screen widget so arms, legs, and the clock body are visible.</li>
         <li>Added more idle animations to the in-app Tilly companion: shimmy, nod, jump, squint, dance, sing, point, and floss.</li>
-        <li>Fixed Home Needs attention so the current-month cashflow dip notice is hidden when browsing a future month, where that notice date and wording would be misleading.</li>
+        <li>Fixed Home Needs attention so the current-month cashflow dip notice is hidden when browsing a future month.</li>
       </ul>
       <h3>May 26, 2026</h3>
       <ul>
-        <li>Prepared build 340 for pre-launch testing.</li>
-        <li>Fixed a TestFlight-only Month calendar regression where paid end-of-month expenses could be counted again after they were already reflected in Cash today.</li>
+        <li>Fixed a Month calendar regression where paid end-of-month expenses could be counted again after they were already reflected in Cash today.</li>
         <li>Improved Tilly's in-app companion look and motion so the optional helper feels more like the reference mascot.</li>
       </ul>
       <h3>May 25, 2026</h3>
       <ul>
-        <li>Prepared build 339 for pre-launch testing.</li>
         <li>Added Tilly, an optional draggable clock companion that can stay on screen while planning.</li>
         <li>Added a Tilly companion setting in Display so the helper can be turned on or off anytime.</li>
         <li>Made Tilly tappable for quick planning todos that follow the current Home, Recurring, Month, or Settings tab.</li>
       </ul>
 
-      <h2>Version 1.1.5, Pre-Launch</h2>
+      <h2>Version 1.1.5</h2>
       <p><strong>Updated:</strong> May 21, 2026</p>
       <h3>May 21, 2026</h3>
       <ul>
-        <li>Prepared build 336 for pre-launch testing.</li>
         <li>Aligned Home heads-up warning logic with Cash today Safe cash projections to avoid contradictory month warnings.</li>
         <li>Fixed Home Needs attention so stale current-month cashflow notices are removed when Cash today shows the month is covered.</li>
         <li>Fixed Safe cash so an entered Cash today amount is not capped by an older month-start balance.</li>
       </ul>
 
-      <h2>Version 1.1.4, Pre-Launch</h2>
+      <h2>Version 1.1.4</h2>
       <p><strong>Updated:</strong> May 19, 2026</p>
       <h3>May 19, 2026</h3>
       <ul>
@@ -66,238 +61,143 @@
         <li>Improved Safe cash detail totals, signs, and money-field formatting so income, expenses, and two-decimal amounts are easier to verify.</li>
         <li>Fixed recurring income status updates so marking income Done is reflected consistently in month planning.</li>
       </ul>
-
       <h3>May 15, 2026</h3>
       <ul>
-        <li>Prepared build 320 for pre-launch testing.</li>
-        <li>Prepared build 319 for pre-launch testing.</li>
         <li>Moved Cash today into the Safe cash explanation so the current bank number and safe cash math can be reviewed and edited together.</li>
         <li>Added a Cash difference row when Cash today is above or below the current plan, keeping Home income and expense totals reconciled with the real bank number.</li>
         <li>Made Settings calmer by starting sections collapsed.</li>
-        <li>Prepared build 318 for pre-launch testing.</li>
         <li>Made reminder timing choices visible at the top of Settings, including the 9:00 AM and 7:00 PM timing details.</li>
       </ul>
-
       <h3>May 14, 2026</h3>
       <ul>
-        <li>Prepared build 317 for pre-launch testing.</li>
         <li>Added optional on-device reminders for all upcoming Home items, with timing choices in Settings.</li>
         <li>Kept reminders private and local to the device, using the same upcoming items already shown in TillNext.</li>
       </ul>
 
-      <h2>Version 1.1.2, Pre-Launch</h2>
+      <h2>Version 1.1.2</h2>
       <p><strong>Updated:</strong> May 13, 2026</p>
       <h3>May 13, 2026</h3>
       <ul>
-        <li>Prepared build 316 for pre-launch testing.</li>
         <li>Made Recurring easier to scan by starting recurring income and expense closed, opening each card with a tap, and adding a Jump to top action near the bottom.</li>
-        <li>Prepared build 315 for pre-launch testing.</li>
         <li>Changed Home so Upcoming and Completed start closed, while still showing separate incoming and outgoing totals at a glance.</li>
         <li>Tightened the Month calendar layout so the full week fits without horizontal scrolling.</li>
-        <li>Prepared build 314 for pre-launch testing.</li>
         <li>Kept Sticky safe cash focused on Home so Recurring and Month stay clear while planning.</li>
-        <li>Prepared build 313 for pre-launch testing.</li>
         <li>Improved Sticky safe cash so the compact Safe cash display replaces the large Home card and stacks cleanly with top notices.</li>
       </ul>
-
       <h3>May 12, 2026</h3>
       <ul>
-        <li>Prepared build 312 for pre-launch testing.</li>
         <li>Added Home display settings to hide Cash today prompts and keep Safe cash pinned while scrolling.</li>
         <li>Improved the pinned Safe cash display so it stacks with trial and off-month notices instead of covering them.</li>
-        <li>Added automated test coverage and CI guidance to help protect local paycheck math and core planning flows.</li>
-        <li>Prepared build 311 for pre-launch testing.</li>
         <li>Tightened the Month calendar into square day cells while keeping each day's balance and cashflow markers visible.</li>
         <li>Kept past Month calendar balances visible in a muted style, so earlier days still show their amounts without looking current.</li>
-        <li>Prepared build 310 for pre-launch testing.</li>
         <li>Limited the Cash was not updated today heads-up to the current month, so past and future months stay focused on that month's plan.</li>
-        <li>Prepared build 309 for pre-launch testing.</li>
         <li>Added support for Apple-managed offer codes for the lifetime unlock. Offer codes are redeemed outside TillNext through Apple, and the app recognizes the verified unlock when it appears.</li>
       </ul>
 
       <h2>Version 1.1.1</h2>
       <h3>May 11, 2026</h3>
       <ul>
-        <li>Prepared build 308 for pre-launch testing.</li>
         <li>Improved Cash today checks so marking income done or expenses paid updates the saved cash amount without jumping the Home screen to Completed.</li>
         <li>Moved the Home undo prompt to the top of the screen and added a clearer Jump to top action after Completed.</li>
         <li>Fixed Month so it stays locked to the calendar view instead of scrolling under the bottom tabs.</li>
         <li>Updated the Home Screen widget so it continues to match the app's safe cash value.</li>
-        <li>Prepared build 306 for pre-launch testing.</li>
         <li>Fixed Delete All Data so saved bank/cash state is cleared and first-time setup appears again.</li>
         <li>Improved first-time setup navigation so the Home step can go back without snapping forward again.</li>
         <li>Updated Cash today so it can estimate expected cash from current Home activity when it has not been entered yet.</li>
         <li>Fixed the large Home Screen widget so completed or skipped items are no longer shown in Next up.</li>
         <li>Removed confusing animated Safe cash change copy after adding one-time income or expenses.</li>
       </ul>
-
       <h3>May 10, 2026</h3>
       <ul>
-        <li>Prepared build 305 for pre-launch testing.</li>
-        <li>Added dark-mode iPhone 17 Pro Max App Store upload screenshots for Home, Recurring, Month, and Settings.</li>
-        <li>Prepared build 302 for pre-launch testing.</li>
         <li>Fixed the Month calendar today marker so two-digit dates stay on one line in the compact phone layout.</li>
-        <li>Prepared build 301 for pre-launch testing.</li>
         <li>Improved purchase restore feedback so Restore Purchases now confirms a restored unlock, explains when no lifetime unlock is found, and clearly identifies forced expired preview builds.</li>
         <li>Kept expired-trial Settings focused on manual CSV backup, iCloud backup, and reset, while restore/import and automatic daily backup controls stay available only during trial or after unlock.</li>
         <li>Made Month calendar daily balances easier to read while keeping the full month visible, and added a Settings option to switch between compact K amounts and full numbers.</li>
         <li>Updated export and backup filenames to use the user's local calendar day.</li>
-        <li>Prepared build 300 for pre-launch testing.</li>
         <li>Improved backup controls so CSV exports and complete backups save directly to iCloud Drive, while iCloud restores now show a timestamped list inside TillNext.</li>
         <li>Fixed CSV restore so phone exports can bring back the current Cash today value along with recurring income, recurring expenses, one-time items, and month bank balances.</li>
         <li>Simplified the Home and Month spending check around paycheck and bank cash by removing extra balance controls from the visible app.</li>
         <li>Made the recent-change undo prompt more prominent with centered TillNext styling.</li>
-        <li>Prepared build 299 for pre-launch testing.</li>
         <li>Simplified the Home Safe cash card by removing the extra Cash and Next money detail rows.</li>
-        <li>Prepared build 298 for pre-launch testing.</li>
         <li>Added an opt-in automatic daily iCloud Drive backup, plus manual iCloud backup save and restore options in Settings.</li>
         <li>Improved CSV export so it saves as an easy-to-read .csv file that can be edited and imported back into TillNext more reliably.</li>
-        <li>Prepared build 297 for pre-launch testing.</li>
         <li>Removed the separate Card tab and card-payback planning flow. Card payments should now be entered as regular expenses, keeping the planner simpler and easier to verify.</li>
         <li>Added Restore from CSV plus manual backup and restore through Files or iCloud Drive from Settings.</li>
-        <li>Updated Help, privacy, support, App Store notes, and first-run setup to reflect the current Home, Recurring, Month, and Settings tabs.</li>
-        <li>Prepared build 295 for pre-launch testing.</li>
+        <li>Updated in-app Help links to use the official tillnext.app site.</li>
         <li>Fixed recurring card payments so newly card-paid items are included in the repeated payment without creating duplicate Card payment rows when monthly repeat is turned off.</li>
-        <li>Updated public App Store metadata and in-app Help links to use the official tillnext.app site.</li>
       </ul>
-
       <h3>May 9, 2026</h3>
       <ul>
-        <li>Prepared build 294 for pre-launch testing.</li>
         <li>Fixed future-month Month calendar jumps so Home scrolls to the selected day immediately without needing a manual nudge.</li>
-        <li>Prepared build 293 for pre-launch testing.</li>
         <li>Made Month calendar day taps more reliable for future months by keeping the pressed day and target month through the jump back to Home.</li>
-        <li>Prepared build 292 for pre-launch testing.</li>
         <li>Fixed Month calendar day taps so current and future months open Home at the pressed date more reliably, including days that do not map to a single visible row.</li>
-        <li>Prepared build 291 for pre-launch testing.</li>
         <li>Fixed Month calendar jumps for future months so tapping a day with a planned item opens Home at that matching row.</li>
-        <li>Prepared build 290 for pre-launch testing.</li>
         <li>Fixed item notes so tapping the notes button opens a small editor without closing the item being added or edited.</li>
         <li>Added compact note previews on Home and Recurring rows so saved notes stay visible after leaving the editor.</li>
         <li>Removed the bottom month picker placement option so the month picker stays consistently at the top of planning screens.</li>
-        <li>Prepared build 289 for pre-launch testing.</li>
         <li>Made item notes available from a small notes button in edit screens, so the main edit form stays short and easier to scan.</li>
         <li>Improved recurring expense payoff calculator entry so amount fields respond immediately and open the keyboard more reliably.</li>
         <li>Fixed one-time expense editing so an empty Payment section no longer appears when there are no payment options to show.</li>
-        <li>Changed Month to open directly as a calendar and removed the old list/calendar setting from Settings.</li>
-        <li>Updated first-run setup so it introduces the current Home, Recurring, Card, Month, and Settings tabs.</li>
-        <li>Improved the bottom month picker placement so the jump picker has more room above the bottom controls.</li>
+        <li>Changed Month to open directly as a calendar.</li>
+        <li>Updated first-run setup to introduce the current app tabs.</li>
       </ul>
-
       <h3>May 8, 2026</h3>
       <ul>
-        <li>Prepared build 288 for pre-launch testing.</li>
         <li>Fixed the recurring expense payoff calculator button so its math icon appears on supported iPhone versions instead of showing an empty circle.</li>
-        <li>Prepared build 287 for pre-launch testing.</li>
         <li>Added a recurring expense payoff calculator so card balance, APR, and payment amount can suggest an end date for payoff-style recurring expenses.</li>
-        <li>Improved Home, Month, and Card planning polish with clearer Safe cash presentation, faster month rolling, better day jumps from Month to Home, and less editing noise on future card payments.</li>
-        <li>Prepared build 286 for pre-launch testing.</li>
+        <li>Improved Home and Month planning polish with clearer Safe cash presentation, faster month rolling, better day jumps from Month to Home, and less editing noise on future payments.</li>
         <li>Improved one-time and recurring item editors with centered amount and name fields, clearer tappable date rows, and a tighter Schedule card for due date, frequency, and end date.</li>
         <li>Changed month bank balance planning so future months start without automatically bringing in the prior month's balance unless a bank balance is entered or matched for that month.</li>
         <li>Improved Month calendar readability by showing full dollar values instead of compact K amounts.</li>
         <li>Made recurring item delete actions calmer and easier to reach from the bottom action area.</li>
-        <li>Prepared build 285 for pre-launch testing.</li>
-        <li>Made Card tab monthly payment controls appear on projected repeat months and match the TillNext card style.</li>
-        <li>Prepared build 284 for pre-launch testing.</li>
         <li>Made Month tab day jumps scroll Home to the exact calendar day that was pressed.</li>
-        <li>Prepared build 283 for pre-launch testing.</li>
-        <li>Made Month tab list and calendar days jump to the matching place on Home.</li>
-        <li>Prepared build 282 for pre-launch testing.</li>
-        <li>Fixed future-month Card tab payment rows so repeated card payments can be dated, marked paid, or removed.</li>
-        <li>Prepared build 281 for pre-launch testing.</li>
-        <li>Fixed the Home Screen widget so its amount refreshes from the same Safe cash value shown in the app, including card payment planning changes.</li>
-        <li>Prepared build 280 for pre-launch testing.</li>
-        <li>Fixed repeated generated card payments so future months also show the Card tab payment row and the recurring items paid with Card.</li>
-        <li>Prepared build 279 for pre-launch testing.</li>
+        <li>Fixed the Home Screen widget so its amount refreshes from the same Safe cash value shown in the app.</li>
         <li>Fixed generated card payments set to Repeat each month so they continue into later months and appear on Home for those months.</li>
-        <li>Prepared build 278 for pre-launch testing.</li>
         <li>Fixed repeating card payments so the Card tab follows the selected month and Home includes the repeated payment for future months.</li>
       </ul>
-
       <h3>May 7, 2026</h3>
       <ul>
-        <li>Prepared build 277 for pre-launch testing.</li>
         <li>Added a one-second hold gesture to the month header so the displayed month can be rolled up or down without opening the picker.</li>
-        <li>Prepared build 276 for pre-launch testing.</li>
-        <li>Added a Repeat each month option for card payments so regular card payoff amounts can show up month after month on Home and in card planning.</li>
+        <li>Added a Repeat each month option for card payments so regular card payoff amounts can show up month after month on Home.</li>
       </ul>
-
       <h3>May 6, 2026</h3>
       <ul>
-        <li>Prepared build 275 for pre-launch testing.</li>
         <li>Fixed the Recurring tab so income and expenses with an Until date only appear in months where they still have an occurrence.</li>
         <li>Fixed recurring income and expenses with an end date so cached future months refresh when the Until date changes, preventing stopped recurring items from staying visible in later months.</li>
       </ul>
-
       <h3>May 5, 2026</h3>
       <ul>
         <li>Added end dates for recurring income and expenses so repeating items can stop after a chosen month.</li>
-        <li>Added a Settings option to switch the Month tab between list view and calendar view.</li>
         <li>Added a Settings toggle to hide the extra balance controls from Home without deleting saved balance details.</li>
         <li>Improved Home status changes so moved items stay easy to find in Upcoming or Completed.</li>
-        <li>Adjusted the Home Heads up notice so it fills the Safe cash card width.</li>
-        <li>Cleaned up the top Home card payment menu so amount and status actions stay there, while full editing remains on the card payment row.</li>
-        <li>Improved card planning so card-paid expenses can roll into one editable Home card payment, with Edit, Change This Month's Amount, Planned, Pending, Paid, and Skip actions.</li>
         <li>Fixed the Month calendar cashflow arrows so income and expenses point the right way.</li>
       </ul>
-
       <h3>May 3, 2026 and earlier</h3>
       <ul>
-        <li>Set the current pre-launch release candidate to version 1.1.1 because the five-tab Home, Recurring, Card, Month, and Settings redesign is a larger navigation update.</li>
         <li>Fixed the Home Screen widget so the safe cash amount keeps cents instead of rounding to whole dollars.</li>
         <li>Fixed Home Cashflow totals so Income total and Expense total show the selected month's full totals.</li>
-        <li>Restored Home actions in the combined Home view so one-time income and expenses, item editing, status changes, and undo work from Home again.</li>
-        <li>Reworked the bottom tabs to Home, Recurring, Card, Month, and Settings, with the month selector on every tab except Settings.</li>
-        <li>Updated the Card tab so Card payback and Paid with sections can collapse, and moved Card payback creation to the same floating add button style used by Home and Recurring.</li>
+        <li>Reworked the bottom tabs to Home, Recurring, Month, and Settings.</li>
         <li>Removed the extra Today label above Safe cash to spend on Home.</li>
-        <li>Fixed duplicate Card tab Paid with rows that could make card selections and generated card paybacks look out of sync.</li>
-        <li>Restored the shared top header with Help, the TillNext wordmark, and Search across Home, Card, Month, Recurring, and Settings.</li>
         <li>Removed the Match Bank and carryover disable switches from Settings so those core tools stay available without extra setup choices.</li>
-        <li>Moved Today Check into the main app flow: Home now starts with Safe cash to spend, Can I buy this?, and Cashflow, while Card and Month hold card tools and day-by-day detail.</li>
-        <li>Restored Home's Upcoming and Completed detail sections below Safe cash, Cashflow, and Can I buy this so selected-month items stay visible in the new tab layout.</li>
-        <li>Fixed Card tab recurring bill dates so Card choices and generated paybacks are tied to the selected month's item instead of leaking dates from another month.</li>
-        <li>Fixed the Month tab's next-month Rest of month projection so earlier cached expenses no longer get pulled into the selected month and hide the first paycheck's effect.</li>
         <li>Removed the Less wordy setting and made the compact Home, Income, Expenses, and Recurring screens the default experience.</li>
-        <li>Added bottom clearance to Today Check so the final rest-of-month day stays visible above the tab buttons.</li>
-        <li>Kept Today Check card payback action pills on one line, including rows with Date, Next, Paid, and Remove actions.</li>
-        <li>Added Today Check controls to delete an extra separate balance, including clearing those item assignments back to Cash.</li>
-        <li>Added a custom date picker for Today Check card paybacks so payback dates can be chosen, changed, or cleared.</li>
-        <li>Changed Today Check from a 14-day view to the rest of the current month, including the purchase check timeline.</li>
-        <li>Capped Today Check safe cash so it cannot show more than Home says is left after the current month's plan.</li>
-        <li>Fixed Today Check duplicate rows when cached Home months reused the same recurring bill source.</li>
-        <li>Added a Settings toggle for an optional Today tab and included Today Check diagnostic rows in the existing CSV export.</li>
-        <li>Fixed Today Check card paybacks so old duplicate generated rows are repaired and each payback can be removed directly.</li>
-        <li>Fixed Today Check card payback cleanup so switching an item back to Cash removes the generated payback.</li>
-        <li>Fixed Today Check available cash so it uses the latest Home balance and includes current-month Home expenses.</li>
-        <li>Fixed Today Check so pending Home expenses, including overdue items, are included in safe-cash calculations.</li>
-        <li>Removed unfinished future expense and savings planning references so TillNext focuses on paycheck timing, recurring bills, and one-time items.</li>
-        <li>Improved Settings reliability during pre-launch testing so support checks open without blocking the app.</li>
         <li>Improved the one-time unlock purchase flow so TillNext retries loading App Store purchase details before reporting purchases unavailable.</li>
         <li>Added lifetime unlock purchase access in Settings so the one-time TillNext unlock can be started from inside the app.</li>
-        <li>Improved bottom tab responsiveness, removed unreliable horizontal tab swipes, and kept lower screen content reachable above the tab buttons.</li>
-        <li>Improved Home refresh performance when planner data changes, keeping totals and notices current while reducing unnecessary work.</li>
+        <li>Improved bottom tab responsiveness and kept lower screen content reachable above the tab buttons.</li>
+        <li>Improved Home refresh performance when planner data changes.</li>
         <li>Improved widget quick-add buttons so they stay readable when the Home Screen widget is customized with tinted or clear rendering.</li>
         <li>Made the darker app icon the default and added a Settings picker to switch between the darker and lighter Home Screen icons.</li>
-        <li>Updated public screenshots with Light Mode, Dark Mode, real small, medium, and large Home Screen widget examples, and Home wording comparison examples from the iPhone simulator.</li>
         <li>Removed the Next income line from the Home Screen widgets so the layouts stay cleaner.</li>
-        <li>Changed the Settings planning switch to Disable Match Bank, with Match Bank available by default.</li>
         <li>Moved the Home undo banner closer to the bottom controls and added a direct way to open the recent undo picker from the banner.</li>
-        <li>Added a larger Till Next widget that shows the next few Home items, and simplified the small and medium widget layout so it no longer has a smaller card inside the widget.</li>
+        <li>Added a larger Till Next widget that shows the next few Home items, and simplified the small and medium widget layout.</li>
         <li>Fixed the Home Screen widget so its Till Next amount matches Home and its colors follow the iPhone's Light or Dark Mode.</li>
-        <li>TillNext now follows the iPhone system appearance for Light and Dark Mode, and the separate Dark Mode setting has been removed.</li>
+        <li>TillNext now follows the iPhone system appearance for Light and Dark Mode.</li>
         <li>Added a Till Next Home Screen widget with quick buttons for one-time income and expenses.</li>
-        <li>Updated the Till Next widget to look more like the Home screen, including the same calm card style and positive, neutral, or warning balance color.</li>
-        <li>Added display settings for the month picker position and planning settings for hiding Match Bank.</li>
+        <li>Updated the Till Next widget to match the Home screen card style with positive, neutral, or warning balance color.</li>
         <li>Expanded the privacy policy with EU, EEA, and UK privacy rights, retention, support request, and local data control details.</li>
-        <li>Added public Terms of Use and aligned the in-app terms and privacy notes with the GDPR privacy wording.</li>
-        <li>Set the first public App Store release candidate to version 1.0.</li>
-        <li>Confirmed the public App Store name as TillNext: Paycheck Planner, with the shorter TillNext name kept for the iPhone Home Screen.</li>
-        <li>Set the final App Store bundle identifier to com.whiptail.TillNext before developer account enrollment.</li>
-        <li>Configured the official TillNext support email at support@tillnext.app.</li>
-        <li>Confirmed v1 device support as iPhone with iOS 17 or later.</li>
+        <li>Added public Terms of Use and aligned the in-app terms and privacy notes with GDPR privacy wording.</li>
         <li>Changed the first-run Terms &amp; Privacy gate to a short consent summary with the full terms still one tap away.</li>
         <li>Added a public Help &amp; FAQ page with screenshots and common tasks.</li>
-        <li>Added a public support page, privacy policy, and changelog for App Store review and customer reference.</li>
+        <li>Added a public support page, privacy policy, and changelog for reference.</li>
         <li>Added in-app support links for private email support and public technical issue reports.</li>
         <li>Kept TillNext local-first with no account, no external connectors, no Google integrations, no ads, and no analytics tracking.</li>
         <li>Added Terms &amp; Privacy review during first launch and as a small link at the bottom of Settings.</li>
@@ -305,7 +205,7 @@
         <li>Added Recurring tab month navigation so future-starting recurring items can be viewed before their month arrives.</li>
         <li>Added past occurrence history for recurring income and recurring expenses.</li>
         <li>Improved recurring item details so opening an item from another month shows that month's occurrence date.</li>
-        <li>Improved recurring expense rows so they show the selected month's expense days next to the cadence, such as Monthly • 25 or Twice a month • 1 &amp; 15.</li>
+        <li>Improved recurring expense rows so they show the selected month's expense days next to the cadence.</li>
         <li>Added a Today shortcut beside income and expense date pickers for faster one-time and recurring entry.</li>
         <li>When saving same-day one-time income or expenses, TillNext now offers to keep the item Pending or mark it Done/Paid.</li>
         <li>Preserved CSV export and local reset from Settings.</li>
@@ -316,7 +216,7 @@
       <p>For technical bug reports, use <a href="https://github.com/xwhiptail/tillnext-site/issues">GitHub Issues</a>.</p>
 
       <footer>
-        <span>Last updated: May 12, 2026</span>
+        <span>Last updated: May 30, 2026</span>
       </footer>
     </main>
   </body>
