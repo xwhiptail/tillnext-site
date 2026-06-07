@@ -291,6 +291,49 @@ nav a:hover {
   margin-bottom: 0;
 }
 
+.promo-video-section {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(280px, 0.72fr);
+  gap: 28px;
+  align-items: center;
+  margin-top: 18px;
+  padding: 34px;
+  background: var(--surface);
+  border: 1px solid var(--outline);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.promo-video-copy {
+  display: grid;
+  gap: 18px;
+}
+
+.promo-video-copy h2 {
+  max-width: 13ch;
+  font-size: clamp(2rem, 4vw, 3.4rem);
+}
+
+.promo-video-copy p {
+  max-width: 54ch;
+  margin: 0;
+}
+
+.promo-video-frame {
+  display: grid;
+  justify-items: center;
+}
+
+.promo-video-frame video {
+  width: min(100%, 340px);
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+  background: #07101e;
+  border: 1px solid var(--outline);
+  border-radius: 18px;
+  box-shadow: 0 22px 48px rgba(0, 0, 0, 0.22);
+}
+
 .privacy-strip,
 .social-strip,
 .support-links a {
@@ -538,6 +581,7 @@ code {
 
   .intro-grid,
   .showcase-hero,
+  .promo-video-section,
   .privacy-strip,
   .social-strip,
   .support-links {
