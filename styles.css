@@ -737,17 +737,26 @@ code {
 }
 
 /* Tilly's Quest section */
-.tillys-quest-section {
+.tillys-quest-teaser {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 28px;
+  grid-template-columns: 1fr auto;
+  gap: 18px;
   align-items: center;
+  margin-top: 18px;
+  padding: 24px;
   background: var(--surface);
   border: 1px solid var(--outline);
-  border-radius: 24px;
-  padding: 32px;
-  box-shadow: var(--shadow);
-  margin-top: 48px;
+  border-radius: 8px;
+}
+
+.tillys-quest-teaser h2 {
+  max-width: 24ch;
+  font-size: clamp(1.55rem, 3vw, 2.35rem);
+}
+
+.tillys-quest-teaser p:not(.eyebrow) {
+  margin: 8px 0 0;
+  max-width: 60ch;
 }
 
 .tq-banner img {
@@ -764,10 +773,10 @@ code {
 }
 
 .tq-soundtrack {
-  grid-column: 1 / -1;
+  margin-top: 28px;
 }
 
-.tq-soundtrack h3 {
+.tq-soundtrack h2 {
   margin: 8px 0 14px;
 }
 
@@ -808,7 +817,7 @@ code {
 }
 
 @media (max-width: 760px) {
-  .tillys-quest-section {
+  .tillys-quest-teaser {
     grid-template-columns: 1fr;
     padding: 22px;
   }
