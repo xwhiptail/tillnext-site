@@ -100,54 +100,30 @@
       .vault-note { color: var(--ink-dim); font-size: 13px; margin-top: 10px; }
       .vault-note b { color: var(--gold); }
 
-      /* ── Sprite Vault ─────────────────────────────────────── */
-      h3.rank { font-family: "Press Start 2P", monospace; font-size: 11px; letter-spacing: 1px;
-        color: var(--sky); margin: 34px 0 14px; }
-      h3.rank .count { color: var(--ink-dim); font-size: 8px; }
-
-      .bestiary { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; }
+      /* ── Sprite Vault (compact grid) ──────────────────────── */
+      .bestiary { display: grid; grid-template-columns: repeat(auto-fill, minmax(94px, 1fr)); gap: 10px; }
       figure.creature { position: relative; margin: 0; display: flex; flex-direction: column; align-items: center;
-        gap: 11px; background: var(--panel); border: 1px solid var(--line); border-radius: 16px;
-        padding: 20px 12px 15px; overflow: hidden;
-        transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease; }
+        gap: 6px; background: var(--panel); border: 1px solid var(--line); border-radius: 12px;
+        padding: 11px 7px 8px; overflow: hidden;
+        transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease; }
       figure.creature::before { content: ""; position: absolute; inset: 0;
-        background: radial-gradient(62% 52% at 50% 36%, var(--aura, rgba(124,196,255,.25)), transparent 72%); }
-      figure.creature:hover { transform: translateY(-6px); border-color: var(--line-bright);
-        box-shadow: 0 18px 44px rgba(0,0,0,.55); }
-      figure.creature img { position: relative; width: 108px; height: 108px; object-fit: contain;
-        filter: drop-shadow(0 9px 15px rgba(0,0,0,.55)); transition: transform .25s ease; }
-      figure.creature:hover img { transform: scale(1.07) translateY(-2px); }
+        background: radial-gradient(60% 52% at 50% 34%, var(--aura, rgba(124,196,255,.22)), transparent 72%); }
+      figure.creature:hover { transform: translateY(-4px); border-color: var(--line-bright);
+        box-shadow: 0 12px 30px rgba(0,0,0,.5); }
+      figure.creature img { position: relative; width: 66px; height: 66px; object-fit: contain;
+        filter: drop-shadow(0 6px 11px rgba(0,0,0,.5)); transition: transform .2s ease; }
+      figure.creature:hover img { transform: scale(1.08); }
       figure.creature figcaption { position: relative; text-align: center; }
-      figure.creature .cname { font-weight: 800; font-size: 13.5px; line-height: 1.15; }
-      figure.creature .ctag { display: block; margin-top: 5px; font-family: "Press Start 2P", monospace;
-        font-size: 6.5px; letter-spacing: 1px; text-transform: uppercase; color: var(--aura-ink, var(--sky)); }
+      figure.creature .cname { font-weight: 800; font-size: 10.5px; line-height: 1.15; color: var(--ink-dim); }
 
-      .biome-hero       { --aura: rgba(124,196,255,.34); --aura-ink: var(--sky); }
-      .biome-plains     { --aura: rgba(74,208,106,.26);  --aura-ink: var(--grass); }
-      .biome-forest     { --aura: rgba(74,208,106,.22);  --aura-ink: var(--grass); }
-      .biome-cave       { --aura: rgba(69,212,232,.26);  --aura-ink: var(--cyan); }
-      .biome-snow       { --aura: rgba(124,196,255,.30); --aura-ink: var(--sky); }
-      .biome-swamp      { --aura: rgba(120,170,80,.24);  --aura-ink: #9bd06a; }
-      .biome-desert     { --aura: rgba(245,194,66,.26);  --aura-ink: var(--gold); }
-      .biome-underworld { --aura: rgba(239,77,77,.30);   --aura-ink: #ff8a63; }
-      .biome-heaven     { --aura: rgba(245,194,66,.30);  --aura-ink: var(--gold); }
-      .biome-castle     { --aura: rgba(143,108,246,.24); --aura-ink: var(--grape); }
-      .biome-boss       { --aura: rgba(239,77,77,.30);   --aura-ink: #ff8a63; }
-
-      .boss-phases { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
-      figure.phase { position: relative; margin: 0; background: var(--panel); border: 1px solid var(--line);
-        border-radius: 18px; padding: 18px 14px 16px; text-align: center; overflow: hidden;
-        transition: transform .2s ease, box-shadow .2s ease; }
-      figure.phase::before { content: ""; position: absolute; inset: 0;
-        background: radial-gradient(70% 60% at 50% 40%, rgba(239,77,77,calc(.10 + var(--rage,0) * .11)), transparent 72%); }
-      figure.phase:hover { transform: translateY(-5px); box-shadow: 0 18px 44px rgba(0,0,0,.55); }
-      figure.phase img { position: relative; width: 100%; max-width: 210px; aspect-ratio: 1; object-fit: contain;
-        filter: drop-shadow(0 10px 18px rgba(0,0,0,.6)); }
-      figure.phase .pnum { position: relative; font-family: "Press Start 2P", monospace; font-size: 8px;
-        letter-spacing: 1px; color: var(--gold); }
-      figure.phase .pname { position: relative; display: block; margin-top: 7px; font-weight: 800; font-size: 13px; }
-      figure.phase .pdesc { position: relative; display: block; margin-top: 4px; font-size: 11.5px; color: var(--ink-dim); line-height: 1.4; }
-      @media (max-width: 540px) { .boss-phases { grid-template-columns: 1fr; } }
+      .biome-hero       { --aura: rgba(124,196,255,.32); }
+      .biome-plains, .biome-forest { --aura: rgba(74,208,106,.24); }
+      .biome-cave       { --aura: rgba(69,212,232,.24); }
+      .biome-snow       { --aura: rgba(124,196,255,.28); }
+      .biome-swamp      { --aura: rgba(120,170,80,.24); }
+      .biome-desert, .biome-heaven { --aura: rgba(245,194,66,.26); }
+      .biome-underworld, .biome-boss { --aura: rgba(239,77,77,.28); }
+      .biome-castle     { --aura: rgba(143,108,246,.24); }
 
       footer.tq-foot { margin-top: 70px; padding-top: 20px; border-top: 1px solid var(--line);
         display: flex; flex-wrap: wrap; gap: 8px 24px; color: var(--ink-dim); font-size: 13px; }
@@ -193,95 +169,49 @@
 
       <section id="sprites" aria-labelledby="vault-title">
         <h2 class="zone" id="vault-title">Sprite Vault</h2>
-        <p class="zone-sub">Every idle sprite in the game — the hero, the bill-monsters of all nine realms, and the bosses guarding each gate.</p>
-
-        <h3 class="rank">The Hero</h3>
+        <p class="zone-sub">Every idle sprite in the game — the hero, the bill-monsters of all nine realms, and the bosses.</p>
         <div class="bestiary">
-          <figure class="creature biome-hero"><img src="../assets/tillys-quest/sprites/tilly-staff.png" alt="Tilly the clock wielding the Staff of Safe Spending" loading="lazy" decoding="async" width="108" height="108"><figcaption><span class="cname">Tilly</span><span class="ctag">Staff of Safe Spending</span></figcaption></figure>
-        </div>
-
-        <h3 class="rank">Paycheck Plains <span class="count">· 3</span></h3>
-        <div class="bestiary">
-          <figure class="creature biome-plains"><img src="../assets/tillys-quest/sprites/dandelion-debt.png" alt="Dandelion Debt sprite" loading="lazy" decoding="async" width="108" height="108"><figcaption><span class="cname">Dandelion Debt</span><span class="ctag">Paycheck Plains</span></figcaption></figure>
-          <figure class="creature biome-plains"><img src="../assets/tillys-quest/sprites/grazing-fee.png" alt="Grazing Fee sprite" loading="lazy" decoding="async" width="108" height="108"><figcaption><span class="cname">Grazing Fee</span><span class="ctag">Paycheck Plains</span></figcaption></figure>
-          <figure class="creature biome-plains"><img src="../assets/tillys-quest/sprites/wind-receipt.png" alt="Wind Receipt sprite" loading="lazy" decoding="async" width="108" height="108"><figcaption><span class="cname">Wind Receipt</span><span class="ctag">Paycheck Plains</span></figcaption></figure>
-        </div>
-
-        <h3 class="rank">Whispering Forest <span class="count">· 3</span></h3>
-        <div class="bestiary">
-          <figure class="creature biome-forest"><img src="../assets/tillys-quest/sprites/mushroom-fee.png" alt="Mushroom Fee sprite" loading="lazy" decoding="async" width="108" height="108"><figcaption><span class="cname">Mushroom Fee</span><span class="ctag">Whispering Forest</span></figcaption></figure>
-          <figure class="creature biome-forest"><img src="../assets/tillys-quest/sprites/acorn-surcharge.png" alt="Acorn Surcharge sprite" loading="lazy" decoding="async" width="108" height="108"><figcaption><span class="cname">Acorn Surcharge</span><span class="ctag">Whispering Forest</span></figcaption></figure>
-          <figure class="creature biome-forest"><img src="../assets/tillys-quest/sprites/interest-snare.png" alt="Interest Snare sprite" loading="lazy" decoding="async" width="108" height="108"><figcaption><span class="cname">Interest Snare</span><span class="ctag">Whispering Forest</span></figcaption></figure>
-        </div>
-
-        <h3 class="rank">Crystal Cave <span class="count">· 3</span></h3>
-        <div class="bestiary">
-          <figure class="creature biome-cave"><img src="../assets/tillys-quest/sprites/rock-debt.png" alt="Rock Debt sprite" loading="lazy" decoding="async" width="108" height="108"><figcaption><span class="cname">Rock Debt</span><span class="ctag">Crystal Cave</span></figcaption></figure>
-          <figure class="creature biome-cave"><img src="../assets/tillys-quest/sprites/bat-bill.png" alt="Bat Bill sprite" loading="lazy" decoding="async" width="108" height="108"><figcaption><span class="cname">Bat Bill</span><span class="ctag">Crystal Cave</span></figcaption></figure>
-          <figure class="creature biome-cave"><img src="../assets/tillys-quest/sprites/crystal-fee.png" alt="Crystal Fee sprite" loading="lazy" decoding="async" width="108" height="108"><figcaption><span class="cname">Crystal Fee</span><span class="ctag">Crystal Cave</span></figcaption></figure>
-        </div>
-
-        <h3 class="rank">Snow Peaks <span class="count">· 3</span></h3>
-        <div class="bestiary">
-          <figure class="creature biome-snow"><img src="../assets/tillys-quest/sprites/frost-fee.png" alt="Frost Fee sprite" loading="lazy" decoding="async" width="108" height="108"><figcaption><span class="cname">Frost Fee</span><span class="ctag">Snow Peaks</span></figcaption></figure>
-          <figure class="creature biome-snow"><img src="../assets/tillys-quest/sprites/ice-invoice.png" alt="Ice Invoice sprite" loading="lazy" decoding="async" width="108" height="108"><figcaption><span class="cname">Ice Invoice</span><span class="ctag">Snow Peaks</span></figcaption></figure>
-          <figure class="creature biome-snow"><img src="../assets/tillys-quest/sprites/budget-freeze.png" alt="Budget Freeze sprite" loading="lazy" decoding="async" width="108" height="108"><figcaption><span class="cname">Budget Freeze</span><span class="ctag">Snow Peaks</span></figcaption></figure>
-        </div>
-
-        <h3 class="rank">Debt Swamp <span class="count">· 3</span></h3>
-        <div class="bestiary">
-          <figure class="creature biome-swamp"><img src="../assets/tillys-quest/sprites/bog-interest.png" alt="Bog Interest sprite" loading="lazy" decoding="async" width="108" height="108"><figcaption><span class="cname">Bog Interest</span><span class="ctag">Debt Swamp</span></figcaption></figure>
-          <figure class="creature biome-swamp"><img src="../assets/tillys-quest/sprites/mosquito-bill.png" alt="Mosquito Bill sprite" loading="lazy" decoding="async" width="108" height="108"><figcaption><span class="cname">Mosquito Bill</span><span class="ctag">Debt Swamp</span></figcaption></figure>
-          <figure class="creature biome-swamp"><img src="../assets/tillys-quest/sprites/vine-debt.png" alt="Vine Debt sprite" loading="lazy" decoding="async" width="108" height="108"><figcaption><span class="cname">Vine Debt</span><span class="ctag">Debt Swamp</span></figcaption></figure>
-        </div>
-
-        <h3 class="rank">Sunk Cost Desert <span class="count">· 3</span></h3>
-        <div class="bestiary">
-          <figure class="creature biome-desert"><img src="../assets/tillys-quest/sprites/cactus-cost.png" alt="Cactus Cost sprite" loading="lazy" decoding="async" width="108" height="108"><figcaption><span class="cname">Cactus Cost</span><span class="ctag">Sunk Cost Desert</span></figcaption></figure>
-          <figure class="creature biome-desert"><img src="../assets/tillys-quest/sprites/sun-tax.png" alt="Sun Tax sprite" loading="lazy" decoding="async" width="108" height="108"><figcaption><span class="cname">Sun Tax</span><span class="ctag">Sunk Cost Desert</span></figcaption></figure>
-          <figure class="creature biome-desert"><img src="../assets/tillys-quest/sprites/scorpion-fee.png" alt="Scorpion Fee sprite" loading="lazy" decoding="async" width="108" height="108"><figcaption><span class="cname">Scorpion Fee</span><span class="ctag">Sunk Cost Desert</span></figcaption></figure>
-        </div>
-
-        <h3 class="rank">The Underworld <span class="count">· 6</span></h3>
-        <div class="bestiary">
-          <figure class="creature biome-underworld"><img src="../assets/tillys-quest/sprites/overdraft-demon.png" alt="Overdraft Demon sprite" loading="lazy" decoding="async" width="108" height="108"><figcaption><span class="cname">Overdraft Demon</span><span class="ctag">Underworld</span></figcaption></figure>
-          <figure class="creature biome-underworld"><img src="../assets/tillys-quest/sprites/interest-imp.png" alt="Interest Imp sprite" loading="lazy" decoding="async" width="108" height="108"><figcaption><span class="cname">Interest Imp</span><span class="ctag">Underworld</span></figcaption></figure>
-          <figure class="creature biome-underworld"><img src="../assets/tillys-quest/sprites/debt-devil.png" alt="Debt Devil sprite" loading="lazy" decoding="async" width="108" height="108"><figcaption><span class="cname">Debt Devil</span><span class="ctag">Underworld</span></figcaption></figure>
-          <figure class="creature biome-underworld"><img src="../assets/tillys-quest/sprites/late-fee-wraith.png" alt="Late Fee Wraith sprite" loading="lazy" decoding="async" width="108" height="108"><figcaption><span class="cname">Late Fee Wraith</span><span class="ctag">Underworld</span></figcaption></figure>
-          <figure class="creature biome-underworld"><img src="../assets/tillys-quest/sprites/subscription-phantom.png" alt="Subscription Phantom sprite" loading="lazy" decoding="async" width="108" height="108"><figcaption><span class="cname">Subscription Phantom</span><span class="ctag">Underworld</span></figcaption></figure>
-          <figure class="creature biome-underworld"><img src="../assets/tillys-quest/sprites/apr-hellhound.png" alt="APR Hellhound sprite" loading="lazy" decoding="async" width="108" height="108"><figcaption><span class="cname">APR Hellhound</span><span class="ctag">Underworld</span></figcaption></figure>
-        </div>
-
-        <h3 class="rank">Heaven <span class="count">· 4</span></h3>
-        <div class="bestiary">
-          <figure class="creature biome-heaven"><img src="../assets/tillys-quest/sprites/audit-angel.png" alt="Audit Angel sprite" loading="lazy" decoding="async" width="108" height="108"><figcaption><span class="cname">Audit Angel</span><span class="ctag">Heaven</span></figcaption></figure>
-          <figure class="creature biome-heaven"><img src="../assets/tillys-quest/sprites/corrupted-cherub.png" alt="Corrupted Cherub sprite" loading="lazy" decoding="async" width="108" height="108"><figcaption><span class="cname">Corrupted Cherub</span><span class="ctag">Heaven</span></figcaption></figure>
-          <figure class="creature biome-heaven"><img src="../assets/tillys-quest/sprites/red-tape-harpy.png" alt="Red Tape Harpy sprite" loading="lazy" decoding="async" width="108" height="108"><figcaption><span class="cname">Red Tape Harpy</span><span class="ctag">Heaven</span></figcaption></figure>
-          <figure class="creature biome-heaven"><img src="../assets/tillys-quest/sprites/divine-debt-collector.png" alt="Divine Debt Collector sprite" loading="lazy" decoding="async" width="108" height="108"><figcaption><span class="cname">Divine Debt Collector</span><span class="ctag">Heaven</span></figcaption></figure>
-        </div>
-
-        <h3 class="rank">Tax Castle <span class="count">· 6</span></h3>
-        <div class="bestiary">
-          <figure class="creature biome-castle"><img src="../assets/tillys-quest/sprites/tax-knight.png" alt="Tax Knight sprite" loading="lazy" decoding="async" width="108" height="108"><figcaption><span class="cname">Tax Knight</span><span class="ctag">Tax Castle</span></figcaption></figure>
-          <figure class="creature biome-castle"><img src="../assets/tillys-quest/sprites/gargoyle-fee.png" alt="Gargoyle Fee sprite" loading="lazy" decoding="async" width="108" height="108"><figcaption><span class="cname">Gargoyle Fee</span><span class="ctag">Tax Castle</span></figcaption></figure>
-          <figure class="creature biome-castle"><img src="../assets/tillys-quest/sprites/audit-scribe.png" alt="Audit Scribe sprite" loading="lazy" decoding="async" width="108" height="108"><figcaption><span class="cname">Audit Scribe</span><span class="ctag">Tax Castle</span></figcaption></figure>
-          <figure class="creature biome-castle"><img src="../assets/tillys-quest/sprites/living-armor.png" alt="Living Loan Armor sprite" loading="lazy" decoding="async" width="108" height="108"><figcaption><span class="cname">Living Loan Armor</span><span class="ctag">Tax Castle</span></figcaption></figure>
-          <figure class="creature biome-castle"><img src="../assets/tillys-quest/sprites/candle-wisp.png" alt="Candle Wisp sprite" loading="lazy" decoding="async" width="108" height="108"><figcaption><span class="cname">Candle Wisp</span><span class="ctag">Tax Castle</span></figcaption></figure>
-          <figure class="creature biome-castle"><img src="../assets/tillys-quest/sprites/mimic-chest.png" alt="Mimic Chest sprite" loading="lazy" decoding="async" width="108" height="108"><figcaption><span class="cname">Mimic Chest</span><span class="ctag">Tax Castle</span></figcaption></figure>
-        </div>
-
-        <h3 class="rank">The Bosses</h3>
-        <div class="boss-phases">
-          <figure class="phase" style="--rage:0"><img src="../assets/tillys-quest/sprites/vaultkeeper.png" alt="Vaultkeeper boss" loading="lazy" decoding="async" width="210" height="210"><span class="pnum">BOSS</span><span class="pname">Vaultkeeper</span><span class="pdesc">Guardian of the Tax Castle gate.</span></figure>
-          <figure class="phase" style="--rage:0"><img src="../assets/tillys-quest/sprites/tax-mech.png" alt="Tax Bill Mech boss" loading="lazy" decoding="async" width="210" height="210"><span class="pnum">BOSS</span><span class="pname">Tax Bill Mech</span><span class="pdesc">The sunk-cost war machine.</span></figure>
-          <figure class="phase" style="--rage:0"><img src="../assets/tillys-quest/sprites/bank-god.png" alt="Bank God boss" loading="lazy" decoding="async" width="210" height="210"><span class="pnum">BOSS</span><span class="pname">Bank God</span><span class="pdesc">Chained in Heaven — free him to pass.</span></figure>
-        </div>
-
-        <h3 class="rank">Final Boss — Uncle Sam</h3>
-        <div class="boss-phases">
-          <figure class="phase" style="--rage:0"><img src="../assets/tillys-quest/sprites/uncle-sam.png" alt="Uncle Sam, phase one" loading="lazy" decoding="async" width="210" height="210"><span class="pnum">PHASE I</span><span class="pname">The Collector</span><span class="pdesc">Uncle Sam unrolls the Final Audit.</span></figure>
-          <figure class="phase" style="--rage:1"><img src="../assets/tillys-quest/sprites/uncle-sam-phase2.png" alt="Uncle Sam, phase two" loading="lazy" decoding="async" width="210" height="210"><span class="pnum">PHASE II</span><span class="pname">Red Tape Bind</span><span class="pdesc">“No refund for you.” He restores himself.</span></figure>
-          <figure class="phase" style="--rage:2"><img src="../assets/tillys-quest/sprites/uncle-sam-phase3.png" alt="Uncle Sam, phase three" loading="lazy" decoding="async" width="210" height="210"><span class="pnum">PHASE III</span><span class="pname">Audit Seal</span><span class="pdesc">Invulnerable — only Light the Way breaks the seal.</span></figure>
+          <figure class="creature biome-hero"><img src="../assets/tillys-quest/sprites/tilly-staff.png" alt="Tilly with the Staff of Safe Spending" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Tilly</span></figcaption></figure>
+          <figure class="creature biome-plains"><img src="../assets/tillys-quest/sprites/dandelion-debt.png" alt="Dandelion Debt" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Dandelion Debt</span></figcaption></figure>
+          <figure class="creature biome-plains"><img src="../assets/tillys-quest/sprites/grazing-fee.png" alt="Grazing Fee" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Grazing Fee</span></figcaption></figure>
+          <figure class="creature biome-plains"><img src="../assets/tillys-quest/sprites/wind-receipt.png" alt="Wind Receipt" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Wind Receipt</span></figcaption></figure>
+          <figure class="creature biome-forest"><img src="../assets/tillys-quest/sprites/mushroom-fee.png" alt="Mushroom Fee" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Mushroom Fee</span></figcaption></figure>
+          <figure class="creature biome-forest"><img src="../assets/tillys-quest/sprites/acorn-surcharge.png" alt="Acorn Surcharge" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Acorn Surcharge</span></figcaption></figure>
+          <figure class="creature biome-forest"><img src="../assets/tillys-quest/sprites/interest-snare.png" alt="Interest Snare" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Interest Snare</span></figcaption></figure>
+          <figure class="creature biome-cave"><img src="../assets/tillys-quest/sprites/rock-debt.png" alt="Rock Debt" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Rock Debt</span></figcaption></figure>
+          <figure class="creature biome-cave"><img src="../assets/tillys-quest/sprites/bat-bill.png" alt="Bat Bill" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Bat Bill</span></figcaption></figure>
+          <figure class="creature biome-cave"><img src="../assets/tillys-quest/sprites/crystal-fee.png" alt="Crystal Fee" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Crystal Fee</span></figcaption></figure>
+          <figure class="creature biome-snow"><img src="../assets/tillys-quest/sprites/frost-fee.png" alt="Frost Fee" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Frost Fee</span></figcaption></figure>
+          <figure class="creature biome-snow"><img src="../assets/tillys-quest/sprites/ice-invoice.png" alt="Ice Invoice" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Ice Invoice</span></figcaption></figure>
+          <figure class="creature biome-snow"><img src="../assets/tillys-quest/sprites/budget-freeze.png" alt="Budget Freeze" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Budget Freeze</span></figcaption></figure>
+          <figure class="creature biome-swamp"><img src="../assets/tillys-quest/sprites/bog-interest.png" alt="Bog Interest" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Bog Interest</span></figcaption></figure>
+          <figure class="creature biome-swamp"><img src="../assets/tillys-quest/sprites/mosquito-bill.png" alt="Mosquito Bill" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Mosquito Bill</span></figcaption></figure>
+          <figure class="creature biome-swamp"><img src="../assets/tillys-quest/sprites/vine-debt.png" alt="Vine Debt" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Vine Debt</span></figcaption></figure>
+          <figure class="creature biome-desert"><img src="../assets/tillys-quest/sprites/cactus-cost.png" alt="Cactus Cost" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Cactus Cost</span></figcaption></figure>
+          <figure class="creature biome-desert"><img src="../assets/tillys-quest/sprites/sun-tax.png" alt="Sun Tax" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Sun Tax</span></figcaption></figure>
+          <figure class="creature biome-desert"><img src="../assets/tillys-quest/sprites/scorpion-fee.png" alt="Scorpion Fee" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Scorpion Fee</span></figcaption></figure>
+          <figure class="creature biome-underworld"><img src="../assets/tillys-quest/sprites/overdraft-demon.png" alt="Overdraft Demon" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Overdraft Demon</span></figcaption></figure>
+          <figure class="creature biome-underworld"><img src="../assets/tillys-quest/sprites/interest-imp.png" alt="Interest Imp" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Interest Imp</span></figcaption></figure>
+          <figure class="creature biome-underworld"><img src="../assets/tillys-quest/sprites/debt-devil.png" alt="Debt Devil" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Debt Devil</span></figcaption></figure>
+          <figure class="creature biome-underworld"><img src="../assets/tillys-quest/sprites/late-fee-wraith.png" alt="Late Fee Wraith" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Late Fee Wraith</span></figcaption></figure>
+          <figure class="creature biome-underworld"><img src="../assets/tillys-quest/sprites/subscription-phantom.png" alt="Subscription Phantom" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Subscription Phantom</span></figcaption></figure>
+          <figure class="creature biome-underworld"><img src="../assets/tillys-quest/sprites/apr-hellhound.png" alt="APR Hellhound" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">APR Hellhound</span></figcaption></figure>
+          <figure class="creature biome-heaven"><img src="../assets/tillys-quest/sprites/audit-angel.png" alt="Audit Angel" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Audit Angel</span></figcaption></figure>
+          <figure class="creature biome-heaven"><img src="../assets/tillys-quest/sprites/corrupted-cherub.png" alt="Corrupted Cherub" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Corrupted Cherub</span></figcaption></figure>
+          <figure class="creature biome-heaven"><img src="../assets/tillys-quest/sprites/red-tape-harpy.png" alt="Red Tape Harpy" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Red Tape Harpy</span></figcaption></figure>
+          <figure class="creature biome-heaven"><img src="../assets/tillys-quest/sprites/divine-debt-collector.png" alt="Divine Debt Collector" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Divine Debt Collector</span></figcaption></figure>
+          <figure class="creature biome-castle"><img src="../assets/tillys-quest/sprites/tax-knight.png" alt="Tax Knight" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Tax Knight</span></figcaption></figure>
+          <figure class="creature biome-castle"><img src="../assets/tillys-quest/sprites/gargoyle-fee.png" alt="Gargoyle Fee" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Gargoyle Fee</span></figcaption></figure>
+          <figure class="creature biome-castle"><img src="../assets/tillys-quest/sprites/audit-scribe.png" alt="Audit Scribe" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Audit Scribe</span></figcaption></figure>
+          <figure class="creature biome-castle"><img src="../assets/tillys-quest/sprites/living-armor.png" alt="Living Loan Armor" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Living Loan Armor</span></figcaption></figure>
+          <figure class="creature biome-castle"><img src="../assets/tillys-quest/sprites/candle-wisp.png" alt="Candle Wisp" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Candle Wisp</span></figcaption></figure>
+          <figure class="creature biome-castle"><img src="../assets/tillys-quest/sprites/mimic-chest.png" alt="Mimic Chest" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Mimic Chest</span></figcaption></figure>
+          <figure class="creature biome-boss"><img src="../assets/tillys-quest/sprites/vaultkeeper.png" alt="Vaultkeeper boss" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Vaultkeeper</span></figcaption></figure>
+          <figure class="creature biome-boss"><img src="../assets/tillys-quest/sprites/tax-mech.png" alt="Tax Bill Mech boss" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Tax Bill Mech</span></figcaption></figure>
+          <figure class="creature biome-boss"><img src="../assets/tillys-quest/sprites/bank-god.png" alt="Bank God boss" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Bank God</span></figcaption></figure>
+          <figure class="creature biome-boss"><img src="../assets/tillys-quest/sprites/uncle-sam.png" alt="Uncle Sam boss, phase one" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Uncle Sam</span></figcaption></figure>
+          <figure class="creature biome-boss"><img src="../assets/tillys-quest/sprites/uncle-sam-phase2.png" alt="Uncle Sam boss, phase two" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Uncle Sam · II</span></figcaption></figure>
+          <figure class="creature biome-boss"><img src="../assets/tillys-quest/sprites/uncle-sam-phase3.png" alt="Uncle Sam boss, phase three" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Uncle Sam · III</span></figcaption></figure>
         </div>
       </section>
 
