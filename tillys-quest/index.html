@@ -1,246 +1,216 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tilly's Quest — Press Kit &amp; Asset Vault</title>
-    <meta name="description" content="Tilly's Quest is Tilly's RPG becoming its own app: battle bill monsters across plains, underworld, and heaven, and face Uncle Sam's Final Audit. Stream the full 13-track soundtrack.">
-    <link rel="icon" type="image/png" href="../assets/tillys-quest/icon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titan+One&family=Press+Start+2P&family=Nunito:wght@500;700;800&display=swap">
-    <style>
-      :root {
-        --night: #0b1426; --panel: #131f38; --panel-2: #182746; --line: rgba(255,255,255,0.09);
-        --line-bright: rgba(255,255,255,0.2); --ink: #f2f6ff; --ink-dim: #aab8d4;
-        --gold: #f5c242; --gold-deep: #e89a1b; --sky: #7cc4ff; --royal: #3f74f0;
-        --cyan: #45d4e8; --grape: #8f6cf6; --hp: #ef4d4d; --grass: #4ad06a;
-      }
-      * { box-sizing: border-box; }
-      html { scroll-behavior: smooth; scroll-padding-top: 86px; }
-      body.tq-night {
-        margin: 0; color: var(--ink); background: var(--night);
-        font-family: "Nunito", system-ui, sans-serif; font-weight: 500;
-        background-image:
-          radial-gradient(1px 1px at 12% 18%, rgba(255,255,255,0.6) 50%, transparent 51%),
-          radial-gradient(1px 1px at 64% 9%,  rgba(255,255,255,0.45) 50%, transparent 51%),
-          radial-gradient(1.5px 1.5px at 83% 27%, rgba(124,196,255,0.7) 50%, transparent 51%),
-          radial-gradient(1px 1px at 39% 33%, rgba(255,255,255,0.35) 50%, transparent 51%),
-          radial-gradient(1.5px 1.5px at 22% 56%, rgba(245,194,66,0.5) 50%, transparent 51%),
-          radial-gradient(1px 1px at 71% 64%, rgba(255,255,255,0.4) 50%, transparent 51%),
-          radial-gradient(1px 1px at 90% 81%, rgba(255,255,255,0.3) 50%, transparent 51%),
-          radial-gradient(1.5px 1.5px at 8% 88%,  rgba(124,196,255,0.45) 50%, transparent 51%),
-          linear-gradient(180deg, #060b18 0%, #0b1426 38%, #0e1930 100%);
-        background-attachment: fixed;
-      }
-      main.tq { max-width: 1080px; margin: 0 auto; padding: 26px 22px 60px; }
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Tilly's Quest — Battle your bills. Master your money.</title>
+<meta name="description" content="Tilly's Quest is a pixel-art RPG that turns real budgeting skills into turn-based battles and minigames. Plan your paycheck, defeat your bills, and free the Paycheck Kingdom." />
+<meta property="og:title" content="Tilly's Quest" />
+<meta property="og:description" content="A pixel-art RPG that teaches budgeting through battles and minigames." />
+<meta property="og:type" content="website" />
+<link rel="stylesheet" href="/tillys-quest/styles.css" />
+</head>
+<body>
 
-      .tq-nav { display: flex; flex-wrap: wrap; gap: 4px 18px; align-items: center;
-        font-size: 13px; font-weight: 800; }
-      .tq-nav a { color: var(--ink-dim); text-decoration: none; padding: 6px 2px; }
-      .tq-nav a:hover { color: var(--sky); }
-      .tq-nav .home { color: var(--gold); }
+<!-- ============================ NAV ============================ -->
+<nav class="nav">
+  <div class="wrap">
+    <div class="brand"><span class="t">TILLY'S</span><span class="q">QUEST</span></div>
+    <div class="links">
+      <a href="#features">Game</a>
+      <a href="#world">World</a>
+      <a href="/tillys-quest/support">Support</a>
+      <a href="/tillys-quest/privacy">Privacy</a>
+      <!-- TODO: replace # with the real App Store listing URL -->
+      <a class="cta" href="#download">Get the App</a>
+    </div>
+  </div>
+</nav>
 
-      .hero { text-align: center; padding: 46px 0 16px; }
-      .crest { width: 96px; height: 96px; border-radius: 24px; border: 2px solid var(--line-bright);
-        box-shadow: 0 14px 44px rgba(0,0,0,0.55), 0 0 0 6px rgba(255,255,255,0.04);
-        animation: bob 3.2s ease-in-out infinite; }
-      .hero .kicker { font-family: "Press Start 2P", monospace; font-size: 10px; letter-spacing: 2px;
-        color: var(--cyan); margin: 26px 0 14px; animation: rise .7s ease both; }
-      .hero h1 { margin: 0; line-height: 0.95; font-family: "Titan One", sans-serif; font-weight: 400;
-        font-size: clamp(46px, 9vw, 84px); animation: rise .7s .08s ease both; }
-      .hero h1 .l1 { display: block; background: linear-gradient(180deg, #ffd96b, var(--gold-deep));
-        -webkit-background-clip: text; background-clip: text; color: transparent;
-        filter: drop-shadow(0 3px 0 rgba(0,0,0,0.55)); }
-      .hero h1 .l2 { display: block; font-size: 0.82em; background: linear-gradient(180deg, #b8e1ff, var(--royal));
-        -webkit-background-clip: text; background-clip: text; color: transparent;
-        filter: drop-shadow(0 3px 0 rgba(0,0,0,0.55)); }
-      .hero .lede { max-width: 620px; margin: 22px auto 0; color: var(--ink-dim); font-size: 17px;
-        line-height: 1.6; animation: rise .7s .16s ease both; }
-      .soon { display: inline-flex; align-items: center; gap: 10px; margin-top: 24px;
-        font-family: "Press Start 2P", monospace; font-size: 10px; color: var(--night);
-        background: linear-gradient(180deg, #ffd96b, var(--gold-deep));
-        padding: 14px 22px; border-radius: 12px; border: 2px solid #00000055;
-        box-shadow: 0 5px 0 #00000066, 0 14px 34px rgba(245,194,66,0.25);
-        animation: rise .7s .24s ease both; }
-      .soon::before { content: "▶"; font-size: 9px; }
+<!-- ============================ HERO =========================== -->
+<header class="hero">
+  <div class="wrap">
+    <!-- floating doodads -->
+    <svg class="float" style="left:7%;top:60px" width="40" height="40" viewBox="0 0 10 10" aria-hidden="true">
+      <rect width="10" height="10" fill="none"/>
+      <path d="M3 1h4v1h1v1h1v4h-1v1h-1v1H3v-1H2V7H1V3h1V2h1z" fill="#f5c245"/>
+      <path d="M3 2h4v1h1v4h-1v1H3V7H2V3h1z" fill="#ffd54a"/>
+      <path d="M4 3h2v1H5v2H4z" fill="#a9750f"/>
+    </svg>
+    <svg class="float f2" style="right:9%;top:90px" width="38" height="34" viewBox="0 0 11 10" aria-hidden="true">
+      <path d="M2 1h2v1h1V1h2v1h1v3H7v1H6v1H5v1H4V6H3V5H2V2H1V2z" fill="#f0584d"/>
+      <path d="M2 2h2v1h1V2h1v2H5v1H4v1H3V4H2z" fill="#ff7a70"/>
+    </svg>
+    <svg class="float f3" style="left:16%;bottom:8px" width="30" height="30" viewBox="0 0 8 8" aria-hidden="true">
+      <path d="M3 0h2v3h3v2H5v3H3V5H0V3h3z" fill="#45d4e8"/>
+    </svg>
 
-      .hud { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: 34px 0 8px;
-        animation: rise .7s .3s ease both; }
-      .hud .stat { font-family: "Press Start 2P", monospace; font-size: 9px; letter-spacing: 1px;
-        color: var(--ink); background: var(--panel); border: 1px solid var(--line);
-        border-radius: 10px; padding: 12px 16px; display: flex; gap: 9px; align-items: center; }
-      .hud .stat b { color: var(--gold); font-weight: 400; }
-      .hud .dot { width: 8px; height: 8px; border-radius: 2px; }
+    <div class="logo reveal">
+      <span class="l1">TILLY'S</span>
+      <span class="l2">QUEST</span>
+    </div>
+    <p class="tag reveal">Battle your bills. Master your money.</p>
+    <p class="sub reveal">A pixel-art RPG where real budgeting skills are your weapons. Plan your
+      paycheck, outsmart your debts, and free the Paycheck Kingdom — one payday at a time.</p>
+    <div class="ctas reveal" id="download">
+      <!-- TODO: replace href with the real App Store URL -->
+      <a class="btn" href="#">▸ Download on iOS</a>
+      <a class="btn ghost" href="#features">See the Quest</a>
+    </div>
+    <div class="chips reveal" style="margin-top:34px">
+      <span class="chip"><b>iOS 17+</b> · iPhone</span>
+      <span class="chip"><b>No ads</b></span>
+      <span class="chip"><b>No accounts</b></span>
+      <span class="chip"><b>Plays offline</b></span>
+    </div>
+  </div>
+</header>
 
-      .banner { margin: 34px 0 0; }
-      .banner img { width: 100%; border-radius: 20px; border: 1px solid var(--line-bright);
-        box-shadow: 0 26px 70px rgba(0,0,0,0.6); display: block; }
+<!-- ========================== FEATURES ========================= -->
+<section id="features">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">The Quest</p>
+      <h2>Money skills, turned into a game</h2>
+      <p class="dim">Every battle teaches a budgeting move you can use in real life.</p>
+    </div>
+    <div class="grid cards">
 
-      h2.zone { font-family: "Titan One", sans-serif; font-weight: 400; font-size: 30px;
-        margin: 64px 0 6px; display: flex; align-items: center; gap: 14px; }
-      h2.zone::after { content: ""; flex: 1; height: 2px;
-        background: linear-gradient(90deg, var(--line-bright), transparent); }
-      .zone-sub { color: var(--ink-dim); margin: 0 0 22px; }
+      <div class="panel card reveal"><div class="pad">
+        <svg class="ico" viewBox="0 0 16 16" aria-hidden="true">
+          <path d="M2 3h12v2H2zM2 6h12v7H2z" fill="#213151"/>
+          <path d="M2 3h12v2H2z" fill="#548ffa"/>
+          <path d="M4 8h3v1H4zM4 10h3v1H4zM9 8h3v1H9zM9 10h3v1H9z" fill="#4cd16b"/>
+        </svg>
+        <h3>Plan the Paycheck</h3>
+        <p>Bank Plan Points each turn, then spend them on the right move. It's turn-based combat
+          built around a budget.</p>
+      </div></div>
 
-      .song-list { list-style: none; margin: 0; padding: 0; display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; }
-      .song-item { display: flex; flex-direction: column; gap: 9px; background: var(--panel);
-        border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; font-weight: 800; }
-      .song-item > span { font-size: 14px; }
-      .song-item > span::before { content: "♪ "; color: var(--cyan); }
-      .song-item audio { width: 100%; height: 36px; }
-      .song-download { font-family: "Press Start 2P", monospace; font-size: 8px; letter-spacing: 1px;
-        color: var(--gold); text-decoration: none; align-self: flex-start;
-        border: 1px solid rgba(245,194,66,0.4); border-radius: 8px; padding: 7px 10px; }
-      .song-download:hover { background: rgba(245,194,66,0.12); }
+      <div class="panel card reveal"><div class="pad">
+        <svg class="ico" viewBox="0 0 16 16" aria-hidden="true">
+          <path d="M8 1l5 2v4c0 4-3 6-5 8-2-2-5-4-5-8V3z" fill="#4cd16b"/>
+          <path d="M8 3l3 1v3c0 2-2 4-3 5-1-1-3-3-3-5V4z" fill="#0b1426"/>
+          <path d="M7 6h2v4H7z M6 7h4v2H6z" fill="#4cd16b"/>
+        </svg>
+        <h3>Defend with Safe Cash</h3>
+        <p>Block incoming bills with a savings shield. Learn why an emergency buffer beats
+          living paycheck to paycheck.</p>
+      </div></div>
 
+      <div class="panel card reveal"><div class="pad">
+        <svg class="ico" viewBox="0 0 16 16" aria-hidden="true">
+          <path d="M3 2h7l3 3v9H3z" fill="#f5c245"/>
+          <path d="M9 2v4h4" fill="#a9750f"/>
+          <path d="M5 8h6v1H5zM5 10h6v1H5zM5 12h4v1H5z" fill="#0b1426"/>
+        </svg>
+        <h3>Pop-Quiz Bosses</h3>
+        <p>Big fights pause for a finance quiz from a 50-question pool — answer well and hit
+          harder. Knowledge is damage.</p>
+      </div></div>
 
+      <div class="panel card reveal"><div class="pad">
+        <svg class="ico" viewBox="0 0 16 16" aria-hidden="true">
+          <path d="M2 4h12v8H2z" fill="#7a4a1c"/>
+          <path d="M2 4h12v3H2z" fill="#a9750f"/>
+          <path d="M7 4h2v8H7z" fill="#f5c245"/>
+          <path d="M6 7h4v2H6z" fill="#ffd54a"/>
+        </svg>
+        <h3>Gear-Lock Chests</h3>
+        <p>Crack treasure with a timing minigame, then spend coins on augments that permanently
+          buff your budget.</p>
+      </div></div>
 
-      .vault-note { color: var(--ink-dim); font-size: 13px; margin-top: 10px; }
-      .vault-note b { color: var(--gold); }
+    </div>
+  </div>
+</section>
 
-      /* ── Sprite Vault (compact grid) ──────────────────────── */
-      .bestiary { display: grid; grid-template-columns: repeat(auto-fill, minmax(94px, 1fr)); gap: 10px; }
-      figure.creature { position: relative; margin: 0; display: flex; flex-direction: column; align-items: center;
-        gap: 6px; background: var(--panel); border: 1px solid var(--line); border-radius: 12px;
-        padding: 11px 7px 8px; overflow: hidden;
-        transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease; }
-      figure.creature::before { content: ""; position: absolute; inset: 0;
-        background: radial-gradient(60% 52% at 50% 34%, var(--aura, rgba(124,196,255,.22)), transparent 72%); }
-      figure.creature:hover { transform: translateY(-4px); border-color: var(--line-bright);
-        box-shadow: 0 12px 30px rgba(0,0,0,.5); }
-      figure.creature img { position: relative; width: 66px; height: 66px; object-fit: contain;
-        filter: drop-shadow(0 6px 11px rgba(0,0,0,.5)); transition: transform .2s ease; }
-      figure.creature:hover img { transform: scale(1.08); }
-      figure.creature figcaption { position: relative; text-align: center; }
-      figure.creature .cname { font-weight: 800; font-size: 10.5px; line-height: 1.15; color: var(--ink-dim); }
+<!-- =========================== WORLD ========================== -->
+<section id="world">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">The Realm</p>
+      <h2>Four layers of the Paycheck Kingdom</h2>
+      <p class="dim">Descend through debt, climb toward financial freedom.</p>
+    </div>
 
-      .biome-hero       { --aura: rgba(124,196,255,.32); }
-      .biome-plains, .biome-forest { --aura: rgba(74,208,106,.24); }
-      .biome-cave       { --aura: rgba(69,212,232,.24); }
-      .biome-snow       { --aura: rgba(124,196,255,.28); }
-      .biome-swamp      { --aura: rgba(120,170,80,.24); }
-      .biome-desert, .biome-heaven { --aura: rgba(245,194,66,.26); }
-      .biome-underworld, .biome-boss { --aura: rgba(239,77,77,.28); }
-      .biome-castle     { --aura: rgba(143,108,246,.24); }
+    <div class="layers">
+      <div class="panel layer flat reveal"><div class="pad" style="display:contents">
+        <svg class="badge" viewBox="0 0 16 16" aria-hidden="true"><rect width="16" height="16" fill="#1b2c4a"/><path d="M2 11h12v3H2z" fill="#4cd16b"/><path d="M5 6h2v5H5zM9 4h2v7H9z" fill="#3aa856"/><circle cx="12" cy="4" r="2" fill="#f5c245"/></svg>
+        <div><h3>Overworld</h3><p>Grassy plains, towns, and a shop. Your home base between battles — stock up, rest at the inn, take on Riddlers.</p></div>
+      </div></div>
 
-      footer.tq-foot { margin-top: 70px; padding-top: 20px; border-top: 1px solid var(--line);
-        display: flex; flex-wrap: wrap; gap: 8px 24px; color: var(--ink-dim); font-size: 13px; }
-      footer.tq-foot a { color: var(--sky); }
+      <div class="panel layer flat reveal"><div class="pad" style="display:contents">
+        <svg class="badge" viewBox="0 0 16 16" aria-hidden="true"><rect width="16" height="16" fill="#2a0f12"/><path d="M2 9h12v5H2z" fill="#6a1f22"/><path d="M3 9l2-3 2 3 2-4 2 4 2-2v2z" fill="#f0584d"/><rect x="3" y="11" width="2" height="2" fill="#ffd54a"/></svg>
+        <div><h3>Underworld</h3><p>Where debts and late fees lurk — and where the Fallen Angel roams, trading every coin you own for forbidden augments.</p></div>
+      </div></div>
 
-      @keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
-      @keyframes bob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
-      @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+      <div class="panel layer flat reveal"><div class="pad" style="display:contents">
+        <svg class="badge" viewBox="0 0 16 16" aria-hidden="true"><rect width="16" height="16" fill="#2a2410"/><path d="M2 10h12v4H2z" fill="#9a7d20"/><path d="M4 4h8v6H4z" fill="#f5c245"/><path d="M6 4h4v6H6z" fill="#ffd54a"/></svg>
+        <div><h3>Heaven</h3><p>Golden gates and the bound Bank God. Free him to face the final collector and break the kingdom's chains.</p></div>
+      </div></div>
 
-    </style>
-  </head>
-  <body class="tq-night">
-    <main class="tq">
-      <nav class="tq-nav" aria-label="Site">
-        <a class="home" href="../">← TillNext</a>
-        <a href="#sprites">Sprites</a>
-        <a href="https://apps.apple.com/us/app/tillnext-paycheck-planner/id6765815244?uo=4" rel="noopener">App Store</a>
-        <a href="../help/">Help</a>
-        <a href="../support/">Support</a>
-        <a href="../changelog/">Changelog</a>
-      </nav>
+      <div class="panel layer flat reveal"><div class="pad" style="display:contents">
+        <svg class="badge" viewBox="0 0 16 16" aria-hidden="true"><rect width="16" height="16" fill="#10182b"/><path d="M2 6h3V3h2v3h2V3h2v3h3v8H2z" fill="#7e8aa8"/><rect x="6" y="9" width="4" height="5" fill="#0b1426"/></svg>
+        <div><h3>Castle Interior</h3><p>The throne-room showdown with Uncle Sam. Everything you've learned about money comes down to this fight.</p></div>
+      </div></div>
+    </div>
+  </div>
+</section>
 
-      <header class="hero">
-        <img class="crest" src="../assets/tillys-quest/icon.png" alt="Tilly's Quest app icon" width="96" height="96">
-        <p class="kicker">NEW GAME — FROM THE MAKERS OF TILLNEXT</p>
-        <h1><span class="l1">TILLY'S</span><span class="l2">QUEST</span></h1>
-        <p class="lede">
-          Tilly the clock sets out to save the Paycheck Kingdom: battle bill monsters across
-          plains, underworld, and heaven, answer riddles, outsmart mimic chests, and face
-          Uncle Sam's Final Audit. Built from the mini-game TillNext players loved.
-        </p>
-        <span class="soon">COMING SOON TO THE APP STORE</span>
-        <div class="hud" aria-label="Game stats">
-          <span class="stat"><span class="dot" style="background:var(--grape)"></span><b>13</b> TRACKS</span>
-          <span class="stat"><span class="dot" style="background:var(--grass)"></span><b>9</b> BIOMES</span>
-          <span class="stat"><span class="dot" style="background:var(--gold)"></span><b>4</b> BOSSES</span>
-        </div>
-      </header>
+<!-- ========================= HOW YOU LEARN ===================== -->
+<section>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Why it works</p>
+      <h2>Sneaky financial literacy</h2>
+    </div>
+    <div class="grid two">
+      <div class="panel reveal"><div class="pad">
+        <h3 style="color:var(--gold)">Learn by doing, not reading</h3>
+        <p class="dim" style="margin-top:10px">Budgeting ideas — planning income, building a safety
+          buffer, avoiding high-interest debt, the cost of compounding — are baked into the moves
+          you make every turn. You feel the concept before you have a name for it.</p>
+      </div></div>
+      <div class="panel reveal"><div class="pad">
+        <h3 style="color:var(--cyan)">Made for all ages</h3>
+        <p class="dim" style="margin-top:10px">Friendly pixel art, short sessions, and no
+          punishing fail states make it great for curious kids and money-anxious adults alike.
+          No purchases, no ads, no pressure.</p>
+      </div></div>
+    </div>
+  </div>
+</section>
 
-      <div class="banner">
-        <img src="../assets/tillys-quest/banner.png" alt="Tilly's Quest banner: Tilly the clock hurling a glowing energy ball next to the Tilly's Quest logo.">
+<!-- =========================== CTA BAND ======================= -->
+<section>
+  <div class="wrap">
+    <div class="panel band reveal"><div class="pad">
+      <h2>Ready to take on payday?</h2>
+      <p class="dim" style="max-width:520px;margin:0 auto 26px">Download Tilly's Quest and start
+        turning your budget into your best weapon.</p>
+      <div class="ctas">
+        <!-- TODO: replace with the real App Store URL -->
+        <a class="btn" href="#">▸ Download on iOS</a>
+        <a class="btn ghost" href="/tillys-quest/support">Need help?</a>
       </div>
+    </div></div>
+  </div>
+</section>
 
-      <section id="sprites" aria-labelledby="vault-title">
-        <h2 class="zone" id="vault-title">Sprite Vault</h2>
-        <p class="zone-sub">Every idle sprite in the game — the hero, the bill-monsters of all nine realms, and the bosses.</p>
-        <div class="bestiary">
-          <figure class="creature biome-hero"><img src="../assets/tillys-quest/sprites/tilly-staff.png" alt="Tilly with the Staff of Safe Spending" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Tilly</span></figcaption></figure>
-          <figure class="creature biome-plains"><img src="../assets/tillys-quest/sprites/dandelion-debt.png" alt="Dandelion Debt" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Dandelion Debt</span></figcaption></figure>
-          <figure class="creature biome-plains"><img src="../assets/tillys-quest/sprites/grazing-fee.png" alt="Grazing Fee" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Grazing Fee</span></figcaption></figure>
-          <figure class="creature biome-plains"><img src="../assets/tillys-quest/sprites/wind-receipt.png" alt="Wind Receipt" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Wind Receipt</span></figcaption></figure>
-          <figure class="creature biome-forest"><img src="../assets/tillys-quest/sprites/mushroom-fee.png" alt="Mushroom Fee" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Mushroom Fee</span></figcaption></figure>
-          <figure class="creature biome-forest"><img src="../assets/tillys-quest/sprites/acorn-surcharge.png" alt="Acorn Surcharge" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Acorn Surcharge</span></figcaption></figure>
-          <figure class="creature biome-forest"><img src="../assets/tillys-quest/sprites/interest-snare.png" alt="Interest Snare" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Interest Snare</span></figcaption></figure>
-          <figure class="creature biome-cave"><img src="../assets/tillys-quest/sprites/rock-debt.png" alt="Rock Debt" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Rock Debt</span></figcaption></figure>
-          <figure class="creature biome-cave"><img src="../assets/tillys-quest/sprites/bat-bill.png" alt="Bat Bill" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Bat Bill</span></figcaption></figure>
-          <figure class="creature biome-cave"><img src="../assets/tillys-quest/sprites/crystal-fee.png" alt="Crystal Fee" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Crystal Fee</span></figcaption></figure>
-          <figure class="creature biome-snow"><img src="../assets/tillys-quest/sprites/frost-fee.png" alt="Frost Fee" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Frost Fee</span></figcaption></figure>
-          <figure class="creature biome-snow"><img src="../assets/tillys-quest/sprites/ice-invoice.png" alt="Ice Invoice" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Ice Invoice</span></figcaption></figure>
-          <figure class="creature biome-snow"><img src="../assets/tillys-quest/sprites/budget-freeze.png" alt="Budget Freeze" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Budget Freeze</span></figcaption></figure>
-          <figure class="creature biome-swamp"><img src="../assets/tillys-quest/sprites/bog-interest.png" alt="Bog Interest" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Bog Interest</span></figcaption></figure>
-          <figure class="creature biome-swamp"><img src="../assets/tillys-quest/sprites/mosquito-bill.png" alt="Mosquito Bill" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Mosquito Bill</span></figcaption></figure>
-          <figure class="creature biome-swamp"><img src="../assets/tillys-quest/sprites/vine-debt.png" alt="Vine Debt" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Vine Debt</span></figcaption></figure>
-          <figure class="creature biome-desert"><img src="../assets/tillys-quest/sprites/cactus-cost.png" alt="Cactus Cost" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Cactus Cost</span></figcaption></figure>
-          <figure class="creature biome-desert"><img src="../assets/tillys-quest/sprites/sun-tax.png" alt="Sun Tax" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Sun Tax</span></figcaption></figure>
-          <figure class="creature biome-desert"><img src="../assets/tillys-quest/sprites/scorpion-fee.png" alt="Scorpion Fee" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Scorpion Fee</span></figcaption></figure>
-          <figure class="creature biome-underworld"><img src="../assets/tillys-quest/sprites/overdraft-demon.png" alt="Overdraft Demon" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Overdraft Demon</span></figcaption></figure>
-          <figure class="creature biome-underworld"><img src="../assets/tillys-quest/sprites/interest-imp.png" alt="Interest Imp" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Interest Imp</span></figcaption></figure>
-          <figure class="creature biome-underworld"><img src="../assets/tillys-quest/sprites/debt-devil.png" alt="Debt Devil" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Debt Devil</span></figcaption></figure>
-          <figure class="creature biome-underworld"><img src="../assets/tillys-quest/sprites/late-fee-wraith.png" alt="Late Fee Wraith" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Late Fee Wraith</span></figcaption></figure>
-          <figure class="creature biome-underworld"><img src="../assets/tillys-quest/sprites/subscription-phantom.png" alt="Subscription Phantom" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Subscription Phantom</span></figcaption></figure>
-          <figure class="creature biome-underworld"><img src="../assets/tillys-quest/sprites/apr-hellhound.png" alt="APR Hellhound" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">APR Hellhound</span></figcaption></figure>
-          <figure class="creature biome-heaven"><img src="../assets/tillys-quest/sprites/audit-angel.png" alt="Audit Angel" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Audit Angel</span></figcaption></figure>
-          <figure class="creature biome-heaven"><img src="../assets/tillys-quest/sprites/corrupted-cherub.png" alt="Corrupted Cherub" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Corrupted Cherub</span></figcaption></figure>
-          <figure class="creature biome-heaven"><img src="../assets/tillys-quest/sprites/red-tape-harpy.png" alt="Red Tape Harpy" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Red Tape Harpy</span></figcaption></figure>
-          <figure class="creature biome-heaven"><img src="../assets/tillys-quest/sprites/divine-debt-collector.png" alt="Divine Debt Collector" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Divine Debt Collector</span></figcaption></figure>
-          <figure class="creature biome-castle"><img src="../assets/tillys-quest/sprites/tax-knight.png" alt="Tax Knight" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Tax Knight</span></figcaption></figure>
-          <figure class="creature biome-castle"><img src="../assets/tillys-quest/sprites/gargoyle-fee.png" alt="Gargoyle Fee" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Gargoyle Fee</span></figcaption></figure>
-          <figure class="creature biome-castle"><img src="../assets/tillys-quest/sprites/audit-scribe.png" alt="Audit Scribe" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Audit Scribe</span></figcaption></figure>
-          <figure class="creature biome-castle"><img src="../assets/tillys-quest/sprites/living-armor.png" alt="Living Loan Armor" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Living Loan Armor</span></figcaption></figure>
-          <figure class="creature biome-castle"><img src="../assets/tillys-quest/sprites/candle-wisp.png" alt="Candle Wisp" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Candle Wisp</span></figcaption></figure>
-          <figure class="creature biome-castle"><img src="../assets/tillys-quest/sprites/mimic-chest.png" alt="Mimic Chest" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Mimic Chest</span></figcaption></figure>
-          <figure class="creature biome-boss"><img src="../assets/tillys-quest/sprites/vaultkeeper.png" alt="Vaultkeeper boss" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Vaultkeeper</span></figcaption></figure>
-          <figure class="creature biome-boss"><img src="../assets/tillys-quest/sprites/tax-mech.png" alt="Tax Bill Mech boss" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Tax Bill Mech</span></figcaption></figure>
-          <figure class="creature biome-boss"><img src="../assets/tillys-quest/sprites/bank-god.png" alt="Bank God boss" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Bank God</span></figcaption></figure>
-          <figure class="creature biome-boss"><img src="../assets/tillys-quest/sprites/uncle-sam.png" alt="Uncle Sam boss" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Uncle Sam</span></figcaption></figure>
-        </div>
-      </section>
+<!-- =========================== FOOTER ========================= -->
+<footer>
+  <div class="wrap">
+    <div class="brand"><span class="t">TILLY'S</span><span class="q">QUEST</span></div>
+    <div class="links">
+      <a href="/tillys-quest/">Home</a>
+      <a href="/tillys-quest/support">Support</a>
+      <a href="/tillys-quest/privacy">Privacy</a>
+    </div>
+    <span class="copy">© <span data-year>2026</span> Whiptail · Made with pixels &amp; budgets</span>
+  </div>
+</footer>
 
-      <section aria-labelledby="soundtrack-title">
-        <h2 class="zone" id="soundtrack-title">Sound Test</h2>
-        <p class="zone-sub">The full 13-track soundtrack — stream it here or take it with you.</p>
-        <ul class="song-list">
-          <li class="song-item"><span>Title Theme</span><audio controls preload="none" src="../assets/tillys-quest/music/tilly_rpg_title.mp3"></audio><a class="song-download" download href="../assets/tillys-quest/music/tilly_rpg_title.mp3">DOWNLOAD</a></li>
-          <li class="song-item"><span>Overworld Theme</span><audio controls preload="none" src="../assets/tillys-quest/music/tilly_rpg_overworld.mp3"></audio><a class="song-download" download href="../assets/tillys-quest/music/tilly_rpg_overworld.mp3">DOWNLOAD</a></li>
-          <li class="song-item"><span>Paycheck Village</span><audio controls preload="none" src="../assets/tillys-quest/music/tilly_rpg_town.mp3"></audio><a class="song-download" download href="../assets/tillys-quest/music/tilly_rpg_town.mp3">DOWNLOAD</a></li>
-          <li class="song-item"><span>Battle Theme</span><audio controls preload="none" src="../assets/tillys-quest/music/tilly_rpg_battle.mp3"></audio><a class="song-download" download href="../assets/tillys-quest/music/tilly_rpg_battle.mp3">DOWNLOAD</a></li>
-          <li class="song-item"><span>The Dark Below</span><audio controls preload="none" src="../assets/tillys-quest/music/tilly_rpg_underworld.mp3"></audio><a class="song-download" download href="../assets/tillys-quest/music/tilly_rpg_underworld.mp3">DOWNLOAD</a></li>
-          <li class="song-item"><span>Vaultkeeper Boss</span><audio controls preload="none" src="../assets/tillys-quest/music/tilly_rpg_vaultkeeper.mp3"></audio><a class="song-download" download href="../assets/tillys-quest/music/tilly_rpg_vaultkeeper.mp3">DOWNLOAD</a></li>
-          <li class="song-item"><span>Tax Bill Mech</span><audio controls preload="none" src="../assets/tillys-quest/music/tilly_rpg_car_tax_boss.mp3"></audio><a class="song-download" download href="../assets/tillys-quest/music/tilly_rpg_car_tax_boss.mp3">DOWNLOAD</a></li>
-          <li class="song-item"><span>Uncle Sam: Final Audit</span><audio controls preload="none" src="../assets/tillys-quest/music/tilly_rpg_uncle_sam.mp3"></audio><a class="song-download" download href="../assets/tillys-quest/music/tilly_rpg_uncle_sam.mp3">DOWNLOAD</a></li>
-          <li class="song-item"><span>Heaven Under Siege</span><audio controls preload="none" src="../assets/tillys-quest/music/tilly_rpg_heaven_siege.mp3"></audio><a class="song-download" download href="../assets/tillys-quest/music/tilly_rpg_heaven_siege.mp3">DOWNLOAD</a></li>
-          <li class="song-item"><span>Heaven Saved</span><audio controls preload="none" src="../assets/tillys-quest/music/tilly_rpg_heaven_saved.mp3"></audio><a class="song-download" download href="../assets/tillys-quest/music/tilly_rpg_heaven_saved.mp3">DOWNLOAD</a></li>
-          <li class="song-item"><span>Budget Sort Game Show</span><audio controls preload="none" src="../assets/tillys-quest/music/tilly_rpg_game_show.mp3"></audio><a class="song-download" download href="../assets/tillys-quest/music/tilly_rpg_game_show.mp3">DOWNLOAD</a></li>
-          <li class="song-item"><span>Victory Fanfare</span><audio controls preload="none" src="../assets/tillys-quest/music/tilly_rpg_victory.mp3"></audio><a class="song-download" download href="../assets/tillys-quest/music/tilly_rpg_victory.mp3">DOWNLOAD</a></li>
-          <li class="song-item"><span>Game Over</span><audio controls preload="none" src="../assets/tillys-quest/music/tilly_rpg_game_over.mp3"></audio><a class="song-download" download href="../assets/tillys-quest/music/tilly_rpg_game_over.mp3">DOWNLOAD</a></li>
-        </ul>
-      </section>
-
-      <p class="vault-note"><b>Press &amp; creators:</b> these tracks are provided for coverage of Tilly's Quest. Have fun — and tag <a href="https://www.tiktok.com/@tillnext.app" rel="noopener" style="color:var(--sky)">@tillnext.app</a>.</p>
-
-      <footer class="tq-foot">
-        <span>Last updated: June 12, 2026</span>
-        <span>Support email: <a href="mailto:support@tillnext.app">support@tillnext.app</a></span>
-        <span><a href="../privacy-policy/">Privacy</a> · <a href="../terms-of-use/">Terms</a></span>
-      </footer>
-    </main>
-
-  </body>
+<script src="/tillys-quest/app.js"></script>
+</body>
 </html>
