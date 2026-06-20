@@ -163,6 +163,19 @@
       @keyframes bob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
       @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
 
+      /* In-game interact-sprite cursor */
+      html, body.tq-night { cursor: url('../assets/tillys-quest/interact-cursor.png') 2 2, auto; }
+      a, button, .eth-dvd { cursor: url('../assets/tillys-quest/interact-cursor.png') 2 2, pointer; }
+
+      /* Floating Ethereum DLC link — drifts like a DVD screensaver */
+      .eth-dvd { position: fixed; top: 0; left: 0; z-index: 50; display: block; line-height: 0;
+        will-change: transform;
+        filter: drop-shadow(0 0 10px rgba(143,108,246,.7)) drop-shadow(0 4px 9px rgba(0,0,0,.55)); }
+      .eth-dvd img { width: 60px; height: 60px; image-rendering: pixelated; display: block; }
+      .eth-dvd:hover { filter: drop-shadow(0 0 16px rgba(124,196,255,.9)) drop-shadow(0 4px 9px rgba(0,0,0,.55)); }
+      .eth-dvd:focus-visible { outline: 3px solid var(--cyan); outline-offset: 5px; border-radius: 10px; }
+      @media print { .eth-dvd { display: none; } }
+
     </style>
   </head>
   <body class="tq-night">
@@ -171,11 +184,11 @@
         <a class="home" href="../">← TillNext</a>
         <a href="#about">The Game</a>
         <a href="#sprites">Sprites</a>
-        <a href="investing-dlc/" style="color:var(--grape)">Investing DLC</a>
         <a href="https://apps.apple.com/us/app/tillnext-paycheck-planner/id6765815244?uo=4" rel="noopener">App Store</a>
         <a href="../help/">Help</a>
         <a href="../support/">Support</a>
         <a href="../changelog/">Changelog</a>
+        <a href="https://www.tiktok.com/@tillnext.app" rel="noopener">TikTok</a>
       </nav>
 
       <header class="hero">
@@ -304,6 +317,50 @@
         <span><a href="../privacy-policy/">Privacy</a> · <a href="../terms-of-use/">Terms</a></span>
       </footer>
     </main>
+
+    <a class="eth-dvd" href="investing-dlc/" aria-label="Investing DLC — The Market Beyond" title="Investing DLC →">
+      <img src="../assets/tillys-quest/investing-dlc/sprites/ethereum-sprite.png" alt="" width="60" height="60" decoding="async">
+    </a>
+    <script>
+      (function () {
+        var el = document.querySelector('.eth-dvd');
+        if (!el) return;
+        var size = 60, pad = 4;
+        var x = Math.random() * Math.max(1, innerWidth - size - pad * 2) + pad;
+        var y = Math.random() * Math.max(1, innerHeight - size - pad * 2) + pad;
+        var sp = 1.4, vx = (Math.random() < 0.5 ? -1 : 1) * sp, vy = (Math.random() < 0.5 ? -1 : 1) * sp;
+        var paused = false;
+        function place() { el.style.transform = 'translate(' + x + 'px,' + y + 'px)'; }
+        place();
+
+        var reduce = matchMedia('(prefers-reduced-motion: reduce)');
+        if (reduce.matches) {
+          // Park it in the bottom-right corner; still clickable.
+          x = innerWidth - size - 16; y = innerHeight - size - 16; place();
+          return;
+        }
+
+        ['mouseenter', 'focus'].forEach(function (e) { el.addEventListener(e, function () { paused = true; }); });
+        ['mouseleave', 'blur'].forEach(function (e) { el.addEventListener(e, function () { paused = false; }); });
+
+        function tick() {
+          if (!paused) {
+            var maxX = innerWidth - size - pad, maxY = innerHeight - size - pad;
+            x += vx; y += vy;
+            if (x <= pad) { x = pad; vx = Math.abs(vx); } else if (x >= maxX) { x = maxX; vx = -Math.abs(vx); }
+            if (y <= pad) { y = pad; vy = Math.abs(vy); } else if (y >= maxY) { y = maxY; vy = -Math.abs(vy); }
+            place();
+          }
+          requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+        addEventListener('resize', function () {
+          x = Math.min(x, Math.max(pad, innerWidth - size - pad));
+          y = Math.min(y, Math.max(pad, innerHeight - size - pad));
+          place();
+        });
+      })();
+    </script>
 
   </body>
 </html>
