@@ -79,6 +79,10 @@
         box-shadow: 0 5px 0 #00000066, 0 14px 34px rgba(245,194,66,0.25);
         animation: rise .7s .24s ease both; }
       .soon::before { content: "▶"; font-size: 9px; }
+      a.soon { text-decoration: none; cursor: pointer; transition: transform .15s ease, box-shadow .15s ease; }
+      a.soon:hover { transform: translateY(-2px);
+        box-shadow: 0 7px 0 #00000066, 0 18px 40px rgba(245,194,66,0.35); }
+      .crest-link, .banner a { display: inline-block; line-height: 0; }
 
       .hud { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: 34px 0 8px;
         animation: rise .7s .3s ease both; }
@@ -191,7 +195,7 @@
       </nav>
 
       <header class="hero">
-        <img class="crest" src="../assets/tillys-quest/icon.png" alt="Tilly's Quest app icon" width="96" height="96">
+        <a class="crest-link" href="https://apps.apple.com/us/app/tillys-quest/id6779267050" rel="noopener" aria-label="Download Tilly's Quest on the App Store"><img class="crest" src="../assets/tillys-quest/icon.png" alt="Tilly's Quest app icon" width="96" height="96"></a>
         <p class="kicker">NEW GAME · A PIXEL-ART BUDGETING RPG</p>
         <h1><span class="l1">TILLY'S</span><span class="l2">QUEST</span></h1>
         <p class="lede">
@@ -199,7 +203,7 @@
           plains, underworld, and heaven, answer riddles, outsmart mimic chests, and face
           Uncle Sam's Final Audit.
         </p>
-        <span class="soon">NOW AVAILABLE ON THE APP STORE</span>
+        <a class="soon" href="https://apps.apple.com/us/app/tillys-quest/id6779267050" rel="noopener">NOW AVAILABLE ON THE APP STORE</a>
         <div class="hud" aria-label="Game stats">
           <span class="stat"><span class="dot" style="background:var(--grape)"></span><b>20</b> TRACKS</span>
           <span class="stat"><span class="dot" style="background:var(--grass)"></span><b>9</b> BIOMES</span>
@@ -209,7 +213,7 @@
       </header>
 
       <div class="banner">
-        <img src="../assets/tillys-quest/banner.png?v=20260620" alt="Tilly's Quest banner: Tilly the clock throwing a punch beside a glowing blue energy swirl and the Tilly's Quest logo, with a Play button.">
+        <a href="https://apps.apple.com/us/app/tillys-quest/id6779267050" rel="noopener" aria-label="Download Tilly's Quest on the App Store"><img src="../assets/tillys-quest/banner.png?v=20260620" alt="Tilly's Quest banner: Tilly the clock throwing a punch beside a glowing blue energy swirl and the Tilly's Quest logo, with a Play button."></a>
       </div>
 
       <section id="about" aria-labelledby="about-title">
