@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tilly's Quest — Press Kit &amp; Asset Vault</title>
+    <title>Tilly's Quest | Press Kit &amp; Asset Vault</title>
     <meta name="description" content="Tilly's Quest is Tilly's RPG, now its own app on the App Store: battle bill monsters across plains, underworld, and heaven, and face Uncle Sam's Final Audit. Stream the full 20-track soundtrack.">
     <link rel="canonical" href="https://tillnext.app/tillys-quest/">
     <meta property="og:title" content="Tilly's Quest">
@@ -64,11 +64,14 @@
         color: var(--cyan); margin: 26px 0 14px; animation: rise .7s ease both; }
       .hero h1 { margin: 0; line-height: 0.95; font-family: "Titan One", sans-serif; font-weight: 400;
         font-size: clamp(46px, 9vw, 84px); animation: rise .7s .08s ease both; }
+      /* The h1 gradients reproduce the shipped game-logo lettering (gold TILLY'S / blue
+         QUEST, see banner.png directly below the hero): a deliberate brand match, not a
+         styling default. */
       .hero h1 .l1 { display: block; background: linear-gradient(180deg, #ffd96b, var(--gold-deep));
-        -webkit-background-clip: text; background-clip: text; color: transparent;
+        -webkit-background-clip: text; background-clip: text; color: transparent; /* unslop-ignore */
         filter: drop-shadow(0 3px 0 rgba(0,0,0,0.55)); }
       .hero h1 .l2 { display: block; font-size: 0.82em; background: linear-gradient(180deg, #b8e1ff, var(--royal));
-        -webkit-background-clip: text; background-clip: text; color: transparent;
+        -webkit-background-clip: text; background-clip: text; color: transparent; /* unslop-ignore */
         filter: drop-shadow(0 3px 0 rgba(0,0,0,0.55)); }
       .hero .lede { max-width: 620px; margin: 22px auto 0; color: var(--ink-dim); font-size: 17px;
         line-height: 1.6; animation: rise .7s .16s ease both; }
@@ -171,7 +174,7 @@
       html, body.tq-night { cursor: url('../assets/tillys-quest/interact-cursor.png') 2 2, auto; }
       a, button, .eth-dvd { cursor: url('../assets/tillys-quest/interact-cursor.png') 2 2, pointer; }
 
-      /* Floating Ethereum DLC link — drifts like a DVD screensaver */
+      /* Floating Ethereum DLC link that drifts like a DVD screensaver */
       .eth-dvd { position: fixed; top: 0; left: 0; z-index: 50; display: block; line-height: 0;
         will-change: transform;
         filter: drop-shadow(0 0 10px rgba(143,108,246,.7)) drop-shadow(0 4px 9px rgba(0,0,0,.55)); }
@@ -218,11 +221,11 @@
 
       <section id="about" aria-labelledby="about-title">
         <h2 class="zone" id="about-title">What is Tilly's Quest?</h2>
-        <p class="zone-sub">A pixel-art RPG that quietly teaches budgeting — your money smarts are your weapons. Every battle move mirrors a real money habit.</p>
+        <p class="zone-sub">A pixel-art RPG that quietly teaches budgeting, where your money smarts are your weapons. Every battle move mirrors a real money habit.</p>
         <div class="about">
           <div class="card"><h3><span class="dot" style="background:var(--royal)"></span>Plan the Paycheck</h3><p>Bank Plan Points each turn, then spend them on the right move. It's turn-based combat built around a budget.</p></div>
           <div class="card"><h3><span class="dot" style="background:var(--grass)"></span>Defend with Safe Cash</h3><p>Block incoming bills with a savings shield, and feel why a buffer beats living payday to payday.</p></div>
-          <div class="card"><h3><span class="dot" style="background:var(--gold)"></span>Pop-Quiz Bosses</h3><p>Boss fights pause for a real money question — or flip on Skill Minigames and endorse checks, sort coins, and stack budgets instead. Ace it either way to strike big.</p></div>
+          <div class="card"><h3><span class="dot" style="background:var(--gold)"></span>Pop-Quiz Bosses</h3><p>Boss fights pause for a real money question. Prefer action? Flip on Skill Minigames and endorse checks, sort coins, and stack budgets instead. Ace it either way to strike big.</p></div>
           <div class="card"><h3><span class="dot" style="background:var(--grape)"></span>Explore &amp; Loot</h3><p>Cross plains, the underworld, and heaven; crack gear-lock chests for coins and permanent upgrades.</p></div>
         </div>
       </section>
@@ -231,8 +234,8 @@
         <h2 class="zone" id="who-title">Who it's for</h2>
         <p class="zone-sub">Made for anyone who wants money to feel a little less scary.</p>
         <div class="about">
-          <div class="card"><h3><span class="dot" style="background:var(--grass)"></span>Curious kids</h3><p>Friendly pixel art, short sessions, and forgiving fail states — an Emergency Fund of second chances — make first money lessons fun and pressure-free.</p></div>
-          <div class="card"><h3><span class="dot" style="background:var(--cyan)"></span>Money-anxious adults</h3><p>Practice planning income, saving, and dodging high-interest debt — by playing, not studying.</p></div>
+          <div class="card"><h3><span class="dot" style="background:var(--grass)"></span>Curious kids</h3><p>Friendly pixel art, short sessions, and forgiving fail states (an Emergency Fund of second chances) make first money lessons fun and pressure-free.</p></div>
+          <div class="card"><h3><span class="dot" style="background:var(--cyan)"></span>Money-anxious adults</h3><p>Practice planning income, saving, and dodging high-interest debt by playing instead of studying.</p></div>
           <div class="card"><h3><span class="dot" style="background:var(--gold)"></span>Families</h3><p>A wholesome co-play pick: learn budgeting basics together, one payday at a time.</p></div>
         </div>
         <div class="tags">
@@ -247,10 +250,10 @@
 
       <section id="daily" aria-labelledby="daily-title">
         <h2 class="zone" id="daily-title">The Daily Gauntlet</h2>
-        <p class="zone-sub">One run a day, twisted by a rotating curse — everyone in the world plays the same one.</p>
+        <p class="zone-sub">One run a day, twisted by a rotating curse. Everyone in the world plays the same one.</p>
         <div class="about">
           <div class="card"><h3><span class="dot" style="background:var(--hp)"></span>A New Curse Every Day</h3><p>Ten rotating mutators warp the rules: MOSH PIT crowds, VHS DAY static, POP QUIZ every third turn, MIMIC FRENZY chests that bite back… you get one shot at today's.</p></div>
-          <div class="card"><h3><span class="dot" style="background:var(--gold)"></span>Build a Streak</h3><p>Clear the gauntlet day after day to grow your streak — and your bragging rights. Miss a day and the counter resets to zero.</p></div>
+          <div class="card"><h3><span class="dot" style="background:var(--gold)"></span>Build a Streak</h3><p>Clear the gauntlet day after day to grow your streak, and your bragging rights with it. Miss a day and the counter resets to zero.</p></div>
           <div class="card"><h3><span class="dot" style="background:var(--sky)"></span>Game Center Leaderboards</h3><p>Daily score, best streak, and lifetime coins climb real leaderboards, with achievements from your first cleared gauntlet to felling fifty bosses.</p></div>
           <div class="card"><h3><span class="dot" style="background:var(--grass)"></span>Saves That Follow You</h3><p>iCloud backup carries your kingdom between iPhone and iPad, and a Records screen keeps your trophies close.</p></div>
         </div>
@@ -270,7 +273,7 @@
 
       <section id="sprites" aria-labelledby="vault-title">
         <h2 class="zone" id="vault-title">Sprite Vault</h2>
-        <p class="zone-sub">Every idle sprite in the game — the hero, the bill-monsters of all nine realms, and the bosses.</p>
+        <p class="zone-sub">Every idle sprite in the game: the hero, the bill-monsters of all nine realms, and the bosses.</p>
         <div class="bestiary">
           <figure class="creature biome-hero"><img src="../assets/tillys-quest/sprites/tilly-staff.png" alt="Tilly with the Staff of Safe Spending" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Tilly</span></figcaption></figure>
           <figure class="creature biome-hero"><img src="../assets/tillys-quest/sprites/luna-fallen-angel.png" alt="Luna, the Fallen Angel, roving covenant vendor" loading="lazy" decoding="async" width="66" height="66"><figcaption><span class="cname">Luna, the Fallen Angel</span></figcaption></figure>
@@ -319,7 +322,7 @@
 
       <section id="soundtrack" aria-labelledby="soundtrack-title">
         <h2 class="zone" id="soundtrack-title">Sound Test</h2>
-        <p class="zone-sub">The full 20-track soundtrack — stream it here or take it with you.</p>
+        <p class="zone-sub">The full 20-track soundtrack. Stream it here or take it with you.</p>
         <ul class="song-list">
           <li class="song-item"><span>Title Theme</span><audio controls preload="none" src="../assets/tillys-quest/music/tilly_rpg_title.mp3"></audio><a class="song-download" download href="../assets/tillys-quest/music/tilly_rpg_title.mp3">DOWNLOAD</a></li>
           <li class="song-item"><span>Overworld Theme</span><audio controls preload="none" src="../assets/tillys-quest/music/tilly_rpg_overworld.mp3"></audio><a class="song-download" download href="../assets/tillys-quest/music/tilly_rpg_overworld.mp3">DOWNLOAD</a></li>
@@ -344,7 +347,7 @@
         </ul>
       </section>
 
-      <p class="vault-note"><b>Press &amp; creators:</b> these tracks are provided for coverage of Tilly's Quest. Have fun — and tag <a href="https://www.tiktok.com/@tillnext.app" rel="noopener" style="color:var(--sky)">@tillnext.app</a>.</p>
+      <p class="vault-note"><b>Press &amp; creators:</b> these tracks are provided for coverage of Tilly's Quest. Have fun, and tag <a href="https://www.tiktok.com/@tillnext.app" rel="noopener" style="color:var(--sky)">@tillnext.app</a>.</p>
 
       <footer class="tq-foot">
         <span>Last updated: July 10, 2026</span>
@@ -354,7 +357,7 @@
       </footer>
     </main>
 
-    <a class="eth-dvd" href="investing-dlc/" aria-label="Investing DLC — The Market Beyond" title="Investing DLC →">
+    <a class="eth-dvd" href="investing-dlc/" aria-label="Investing DLC: The Market Beyond" title="Investing DLC">
       <img src="../assets/tillys-quest/investing-dlc/sprites/ethereum-sprite.png" alt="" width="60" height="60" decoding="async">
     </a>
     <script>
