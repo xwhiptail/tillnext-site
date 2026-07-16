@@ -77,6 +77,9 @@
         box-shadow: 0 5px 0 #00000066, 0 14px 34px rgba(143,108,246,0.25);
         animation: rise .7s .24s ease both; }
       .soon::before { content: "✦"; font-size: 9px; }
+      a.soon { text-decoration: none; cursor: pointer; transition: transform .15s ease, box-shadow .15s ease; }
+      a.soon:hover { transform: translateY(-2px);
+        box-shadow: 0 7px 0 #00000066, 0 18px 40px rgba(143,108,246,0.35); }
 
       .hud { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: 34px 0 8px;
         animation: rise .7s .3s ease both; }
@@ -187,7 +190,7 @@
           learns to <em>grow</em> wealth instead of only guarding it. A new realm, four new bosses,
           discoverable Glyphs that re-tune your moves, and a Build Your Portfolio minigame.
         </p>
-        <span class="soon">PAID EXPANSION · COMING SOON</span>
+        <a class="soon" href="https://apps.apple.com/us/app/tillys-quest/id6779267050" rel="noopener">PAID EXPANSION · OUT NOW</a>
         <div class="hud" aria-label="Expansion stats">
           <span class="stat"><span class="dot" style="background:var(--hp)"></span><b>4</b> BOSSES</span>
           <span class="stat"><span class="dot" style="background:var(--grass)"></span><b>10</b> ENEMIES</span>
