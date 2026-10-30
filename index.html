@@ -3,195 +3,58 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>TillNext: Paycheck Planner Support</title>
-    <meta name="description" content="Support, privacy, help, and release information for TillNext: Paycheck Planner, a local-first iPhone app that helps you know what you have, till next paycheck.">
-    <link rel="canonical" href="https://tillnext.app/">
+    <meta name="color-scheme" content="light dark">
+    <title>TillNext: Paycheck Planner</title>
+    <meta name="description" content="Preview TillNext 2.0: a free, local-first paycheck planner for iPhone.">
     <meta property="og:title" content="TillNext: Paycheck Planner">
-    <meta property="og:description" content="A local-first iPhone app that helps you know what you have, till next paycheck. No account, no bank sync, no ads, no analytics.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://tillnext.app/">
-    <meta property="og:image" content="https://tillnext.app/assets/tillnext-share-card.png?v=20260429">
-    <meta property="og:image:secure_url" content="https://tillnext.app/assets/tillnext-share-card.png?v=20260429">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="TillNext app icon with the tagline Know what you have, till next paycheck.">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="TillNext: Paycheck Planner">
-    <meta name="twitter:description" content="A local-first iPhone app that helps you know what you have, till next paycheck.">
-    <meta name="twitter:image" content="https://tillnext.app/assets/tillnext-share-card.png?v=20260429">
-    <link rel="icon" type="image/png" href="assets/tillnext-app-icon.png">
-    <link rel="apple-touch-icon" href="assets/tillnext-app-icon.png">
-    <link rel="stylesheet" href="styles.css?v=20260503-clean-widget-corners">
+    <meta property="og:description" content="Preview TillNext 2.0. Free paycheck planning, saved locally on your iPhone.">
+    <meta property="og:type" content="website"><meta property="og:url" content="https://tillnext.app/">
+    <meta property="og:image" content="https://tillnext.app/assets/tillnext-app-icon-dark.png?v=2.0">
+    <meta property="og:image:width" content="1024"><meta property="og:image:height" content="1024">
+    <meta property="og:image:alt" content="TillNext calendar and forward arrow app icon">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" type="image/png" href="assets/tillnext-app-icon-dark.png">
+    <link rel="stylesheet" href="planner.css?v=2.0">
   </head>
   <body>
-    <main class="home-page">
-      <nav class="site-nav" aria-label="Primary navigation">
-        <a class="brand-link" href="./" aria-label="TillNext home">
-          <span class="brand-wordmark">Till<span>Next</span></span>
-        </a>
-        <div class="nav-links">
-          <a href="https://apps.apple.com/us/app/tillnext-paycheck-planner/id6765815244?uo=4" rel="noopener">App Store</a>
-          <a href="tillys-quest/">Tilly's Quest</a>
-          <a href="help/">Help &amp; FAQ</a>
-          <a href="privacy-policy/">Privacy Policy</a>
-          <a href="terms-of-use/">Terms of Use</a>
-          <a href="support/">Support</a>
-          <a href="changelog/">Changelog</a>
-        </div>
-      </nav>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header wrap">
+  <a class="brand" href="./" aria-label="TillNext home"><picture><source srcset="assets/tillnext-app-icon-dark.png" media="(prefers-color-scheme: dark)"><img src="assets/tillnext-app-icon.png" width="36" height="36" alt=""></picture><span>TillNext</span></a>
+  <nav aria-label="Main navigation"><a href="#features">Features</a><a href="pricing/">Pricing</a><a href="help/">Help</a><a href="support/">Support</a></nav>
+</header>
+<main id="main" class="wrap home">
 
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-copy">
-          <p class="eyebrow">TillNext: Paycheck Planner</p>
-          <h1 id="hero-title">Know what you have, till next paycheck.</h1>
-          <p class="hero-lede">
-            TillNext is a local-first iPhone app for planning income, recurring bills,
-            one-time expenses, and the month ahead without connecting a bank account.
-          </p>
-          <div class="hero-actions" aria-label="Primary links">
-            <a class="button primary" href="https://apps.apple.com/us/app/tillnext-paycheck-planner/id6765815244?uo=4" rel="noopener">Download on the App Store</a>
-            <a class="button secondary" href="help/">Get Help</a>
-            <a class="button secondary" href="support/">Contact Support</a>
-          </div>
-          <ul class="trust-list" aria-label="Privacy highlights">
-            <li>No account</li>
-            <li>No bank sync</li>
-            <li>No ads or analytics</li>
-          </ul>
-        </div>
+<section class="intro" aria-labelledby="intro-title">
+  <div class="intro-copy">
+    <p class="release-note">TillNext 2.0 preview · App Store release in preparation</p>
+    <h1 id="intro-title">Plan the money<br class="wide-only"> between paychecks.</h1>
+    <p class="lead">See what you can spend, what needs to stay for bills, and how the rest of your month looks.</p>
+    <p>Enter your bank balance, add your income and expenses, and review the plan as you mark items received or paid. Your money stays yours to manage.</p>
+    <a class="button" href="https://apps.apple.com/us/app/tillnext-paycheck-planner/id6765815244?uo=4">View on the App Store</a>
+    <p class="caption">Free planning in 2.0. No ads or subscription.<br>For iPhone with iOS 17 or later.</p>
+  </div>
+  <figure class="app-shot" data-screenshot-slot="home"><picture><source srcset="assets/help-home-dark.png" media="(prefers-color-scheme: dark)"><img src="assets/help-home.png" alt="TillNext Home with Available to spend, a cashflow chart, monthly income and expenses, and the projected month-end balance." width="1320" height="2868" loading="eager" decoding="async"></picture><figcaption>Home keeps your next decision in view.</figcaption></figure>
+</section>
+<section id="features" class="section" aria-labelledby="features-title">
+  <div class="section-heading"><h2 id="features-title">A clear plan, across payday and month-end.</h2><p>Four familiar tabs. The details you need, without a wall of numbers.</p></div>
+  <div class="feature-list">
+    <div><h3>Know what is available</h3><p><strong>Available to spend</strong> separates spending money from what is held for planned bills. Follow the <strong>Cashflow forecast</strong>, monthly income and expenses, and projected month-end balance before reviewing upcoming items.</p></div>
+    <div><h3>Keep recurring things recurring</h3><p>Add a paycheck or bill once. Review its occurrences in each month, and change one occurrence when real life changes the plan.</p></div>
+    <div><h3>Plan beyond this month</h3><p>Move between months and use <strong>This month</strong> to return to the current plan. Review and update an existing paycheck when it arrives early.</p></div>
+  </div>
+  <div class="screenshot-grid">
+    <figure class="app-shot" data-screenshot-slot="recurring"><picture><source srcset="assets/help-recurring-dark.png" media="(prefers-color-scheme: dark)"><img src="assets/help-recurring.png" alt="TillNext Recurring tab with repeating income and expenses." width="1320" height="2868" loading="lazy" decoding="async"></picture><figcaption>Recurring · Income and bills on your schedule.</figcaption></figure>
+    <figure class="app-shot" data-screenshot-slot="month"><picture><source srcset="assets/help-month-dark.png" media="(prefers-color-scheme: dark)"><img src="assets/help-month.png" alt="TillNext Month calendar with daily projected balances." width="1320" height="2868" loading="lazy" decoding="async"></picture><figcaption>Month · Follow your cash through the calendar.</figcaption></figure>
+    <figure class="app-shot" data-screenshot-slot="settings"><picture><source srcset="assets/help-settings-dark.png" media="(prefers-color-scheme: dark)"><img src="assets/help-settings.png" alt="TillNext Settings with display, data, and supporter controls." width="1320" height="2868" loading="lazy" decoding="async"></picture><figcaption>Settings · Your preferences, backups, and support.</figcaption></figure>
+  </div>
+  <p><a href="help/">See the walkthrough and common questions</a></p>
+</section>
+<section class="section split" aria-labelledby="privacy-title">
+  <div><h2 id="privacy-title">Your plan lives on your iPhone.</h2><p>No account, bank connection, analytics, or tracking. Enter what you need and keep control of your planning data.</p><p>Export a readable CSV or choose an iCloud Drive backup when you want one. The app works in light and dark mode, with the same controls in both.</p><a href="privacy-policy/">Read the privacy policy</a></div>
+  <div class="plain-panel"><h3>Free to plan. Optional to support.</h3><p>Every planning feature is free in TillNext 2.0. If the app helps you, a one-time Supporter purchase adds Forest, Plum, and Amber accent colors.</p><p>There are no ads to remove and no subscription to manage.</p><a href="pricing/">See pricing and supporter colors</a></div>
+</section>
 
-        <div class="hero-media" aria-label="TillNext app screenshots">
-          <picture>
-            <source srcset="assets/help-home-dark.png" media="(prefers-color-scheme: dark)">
-            <img class="phone-shot phone-shot-main" src="assets/help-home.png" alt="TillNext Home screen showing what is left for the month and upcoming items.">
-          </picture>
-          <picture>
-            <source srcset="assets/help-recurring-dark.png" media="(prefers-color-scheme: dark)">
-            <img class="phone-shot phone-shot-side" src="assets/help-recurring.png" alt="TillNext Recurring screen showing recurring income and recurring expenses.">
-          </picture>
-        </div>
-      </section>
-
-      <section class="intro-grid" aria-label="What TillNext helps with">
-        <article class="info-card">
-          <h2>Plan Between Paychecks</h2>
-          <p>See what is coming in, what needs to go out, and what is left for the month.</p>
-        </article>
-        <article class="info-card">
-          <h2>Keep Recurring Items Together</h2>
-          <p>Add paychecks, bills, subscriptions, and other repeating items once, then review them by month.</p>
-        </article>
-        <article class="info-card">
-          <h2>Handle One-Time Expenses</h2>
-          <p>Add repairs, gifts, fees, groceries, or other one-off spending without rebuilding a spreadsheet.</p>
-        </article>
-      </section>
-
-      <section class="promo-video-section" aria-labelledby="promo-video-title">
-        <div class="promo-video-copy">
-          <p class="eyebrow">Latest TikTok</p>
-          <h2 id="promo-video-title">Tilly fights the bills like an RPG boss battle.</h2>
-          <p>
-            A turn-based payday battle where TillNext turns income, bills,
-            and safe cash into a plan you can read before payday.
-          </p>
-          <div class="hero-actions">
-            <a class="button primary" href="https://apps.apple.com/us/app/tillnext-paycheck-planner/id6765815244?uo=4" rel="noopener">Download TillNext</a>
-            <a class="button secondary" href="https://www.tiktok.com/@tillnext.app" rel="noopener">Follow on TikTok</a>
-          </div>
-        </div>
-        <div class="promo-video-frame">
-          <video
-            controls
-            playsinline
-            preload="metadata"
-            poster="assets/marketing/tillnext-tilly-rpg-bills-cover-2026-06-07.png"
-            aria-label="TillNext TikTok promo showing Tilly fighting bill enemies in an RPG-style payday battle."
-          >
-            <source src="assets/marketing/tillnext-tilly-rpg-bills-2026-06-07.mp4" type="video/mp4">
-          </video>
-        </div>
-      </section>
-
-      <section class="tillys-quest-teaser" aria-labelledby="tillys-quest-title">
-        <div>
-          <p class="eyebrow">New Game</p>
-          <h2 id="tillys-quest-title">Tilly's Quest — Tilly's RPG is now its own app.</h2>
-          <p>Battle bill monsters, answer riddles, and face Uncle Sam's Final Audit. Soundtrack out now.</p>
-        </div>
-        <div class="hero-actions">
-          <a class="button primary" href="tillys-quest/">Explore Tilly's Quest</a>
-        </div>
-      </section>
-
-      <section class="hero screen-showcase showcase-hero" aria-labelledby="screens-title">
-        <div class="hero-copy showcase-copy">
-          <p class="eyebrow">App Showcase</p>
-          <h2 id="screens-title">Widgets up front. The planner behind them.</h2>
-          <p class="hero-lede">
-            Widgets keep the number close. Home, Recurring, Month, and
-            Settings keep the plan organized from the same private monthly data.
-          </p>
-          <ul class="trust-list" aria-label="App showcase highlights">
-            <li>Recurring engine</li>
-            <li>Private controls</li>
-            <li>Home Screen widgets</li>
-          </ul>
-        </div>
-
-        <div class="hero-media showcase-media" aria-label="TillNext app and widget screenshots">
-          <picture>
-            <source srcset="assets/help-recurring-dark.png" media="(prefers-color-scheme: dark)">
-            <img class="phone-shot phone-shot-main" src="assets/help-recurring.png" alt="TillNext Recurring screen with recurring income and recurring expenses.">
-          </picture>
-          <picture>
-            <source srcset="assets/help-settings-dark.png" media="(prefers-color-scheme: dark)">
-            <img class="phone-shot phone-shot-side" src="assets/help-settings.png" alt="TillNext Settings screen with purchase, data, and first-run guide controls.">
-          </picture>
-          <picture>
-            <source srcset="assets/widget-home-dark.png" media="(prefers-color-scheme: dark)">
-            <img class="widget-shot" src="assets/widget-home.png" alt="TillNext Home Screen widgets showing quick-add buttons and the Till Next amount.">
-          </picture>
-          <picture>
-            <source srcset="assets/widget-compact-dark.png" media="(prefers-color-scheme: dark)">
-            <img class="widget-small-shot" src="assets/widget-compact.png" alt="Smaller TillNext Home Screen widget with the Till Next amount and quick-add buttons.">
-          </picture>
-        </div>
-      </section>
-
-      <section class="privacy-strip" aria-labelledby="privacy-title">
-        <div>
-          <p class="eyebrow">Privacy First</p>
-          <h2 id="privacy-title">Your planning data stays on your iPhone.</h2>
-        </div>
-        <p>
-          TillNext does not use developer-operated accounts, external bank connectors, advertising SDKs,
-          analytics SDKs, or third-party tracking. You can export a CSV or reset local data from Settings.
-        </p>
-        <div class="privacy-actions">
-          <a class="button secondary" href="privacy-policy/">Read Privacy Policy</a>
-          <a class="button secondary" href="terms-of-use/">Read Terms</a>
-        </div>
-      </section>
-
-      <section class="social-strip" aria-labelledby="social-title">
-        <div>
-          <p class="eyebrow">Follow Along</p>
-          <h2 id="social-title">Launch updates, quick demos, and small business dev notes.</h2>
-        </div>
-        <div class="social-links" aria-label="TillNext social links">
-          <a class="tiktok-link" href="https://www.tiktok.com/@tillnext.app" rel="noopener" aria-label="TikTok @tillnext.app">
-            <span class="tiktok-symbol" aria-hidden="true">&#9834;</span>
-            <span>TikTok @tillnext.app</span>
-          </a>
-        </div>
-      </section>
-
-      <footer>
-        <span>Last updated: June 11, 2026</span>
-        <span>Support email: <a href="mailto:support@tillnext.app">support@tillnext.app</a></span>
-      </footer>
-    </main>
+</main>
+<footer class="site-footer wrap"><div><strong>TillNext</strong><p>A paycheck planner for iPhone.<br>Local-first. No account needed.</p></div><nav aria-label="Footer navigation"><a href="changelog/">Changelog</a><a href="privacy-policy/">Privacy</a><a href="terms-of-use/">Terms</a><a href="mailto:support@tillnext.app">Email support</a></nav></footer>
   </body>
 </html>
